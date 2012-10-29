@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<!--
+Copyright 2005 Jonathan Nowitz (jonathannowitz@gmail.com) and Google, Inc.
+
+This file is part of FireTitle.
+
+FireTitle is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+FireTitle is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with FireTitle; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+-->
+
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
+
+  <RDF:Seq about="urn:mozilla:locale:root">
+    <!-- The name of the package in the chrome, e.g., google-sample -->
+    <RDF:li resource="urn:mozilla:locale:en-US"/>
+  </RDF:Seq>
+
+  <RDF:Description about="urn:mozilla:locale:en-US">
+    <chrome:packages>
+      <RDF:Seq about="urn:mozilla:locale:en-US:packages">
+        <RDF:li resource="urn:mozilla:locale:en-US:firetitle"/>
+      </RDF:Seq>
+    </chrome:packages>
+  </RDF:Description>
+
+
+</RDF:RDF>

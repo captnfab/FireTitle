@@ -1,0 +1,17 @@
+<!ENTITY FireTitleWindowNameCaption "Current Window Name">
+<!ENTITY FireTitleWindowNameHeader "Set the name of the current window">
+<!ENTITY FireTitlePatternCaption "Global Settings">
+<!ENTITY FireTitlePatternHeader "Set the title pattern">
+<!ENTITY FireTitleDefaultWindowNameHeader "Default name for new windows">
+<!ENTITY FireTitleWindowNameNoDefault "Window has no name by default">
+<!ENTITY FireTitleWindowNameShortDefault "Use opening window's name as a default">
+<!ENTITY FireTitleWindowNameLongDefault "Use opening window's name/title as a default">
+<!ENTITY FireTitlePatternMakeDefault "Make this pattern the default for new windows">
+<!ENTITY FireTitlePatternApplyToOpen "Apply this pattern to all open windows">
+<!ENTITY FireTitleCompatibilityModeHelpLink "Compatibility Mode">
+<!ENTITY FireTitleCompatibilityModeDescription1 "If you experience compatibility issues with other extensions, try "> 
+<!ENTITY FireTitleCompatibilityModeDescription2 "."> 
+<!ENTITY FireTitleCompatibilityMode "Compatibility Mode">
+<!ENTITY FireTitlePreviewCaption "Title Preview">
+<!ENTITY FireTitlePreviewDescription "Preview with current pattern and window name">
+<!ENTITY FireTitlePreviewErrorDescription "Pattern errors">

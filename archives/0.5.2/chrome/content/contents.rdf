@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<!--
+Copyright 2011-2012 Fabien Givors (fabien.givors@chezlefab.net)
+Copyright 2008 Jonathan Nowitz (jonathannowitz@gmail.com)
+Copyright 2005 Jonathan Nowitz (jonathannowitz@gmail.com) and Google, Inc.
+
+This file is part of FireTitle.
+
+FireTitle is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+FireTitle is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with FireTitle; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+-->
+
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
+
+  <!-- list all the packages being supplied by this jar -->
+  <RDF:Seq about="urn:mozilla:package:root">
+    <!-- The name of the package in the chrome, e.g., google-sample -->
+    <RDF:li resource="urn:mozilla:package:firetitle"/>
+  </RDF:Seq>
+
+  <!-- package information -->
+  <!-- The name of the package in the chrome -->
+  <RDF:Description about="urn:mozilla:package:firetitle"
+    chrome:name="firetitle" />
+
+  <!-- What file overlays which. Change as appropriate, or remove. Here
+      we overlay browser.xul with my-overlay.xul in the google-sample
+      extension (this one) -->
+ <RDF:Seq about="urn:mozilla:overlays">
+   <RDF:li resource="chrome://browser/content/browser.xul" />
+ </RDF:Seq>
+
+ <RDF:Seq about="chrome://browser/content/browser.xul">
+   <RDF:li>chrome://firetitle/content/firetitle.xul</RDF:li>
+ </RDF:Seq>
+
+</RDF:RDF>

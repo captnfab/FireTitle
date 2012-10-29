@@ -1,0 +1,77 @@
+<!ENTITY FireTitleAboutTabLabel "About">
+<!ENTITY FireTitleAboutTabAccessKey "A">
+<!ENTITY FireTitleOptionsTabLabel "Options">
+<!ENTITY FireTitleOptionsTabAccessKey "O">
+<!ENTITY FireTitleAboutFireTitleCaption "About FireTitle">
+<!ENTITY FireTitleAboutCopyright "
+<html:p>
+Copyright 2005 Jonathan Nowitz (jonathannowitz@gmail.com) and Google, Inc.
+</html:p><html:p>
+FireTitle is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+</html:p><html:p>
+FireTitle is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+</html:p><html:p>
+You should have received a copy of the GNU General Public License
+along with FireTitle; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+</html:p>
+">
+<!ENTITY FireTitleAboutFireTitleDescription
+      "This extension allows you to control the text that appears in the 
+      title bar of your Firefox windows by changing the Pattern used to
+      construct the title text or the Name of an individual window.
+    <html:p>
+      The Pattern lists the pieces of information you want in your title text.
+      Without this extension, the pieces of information you get are Document
+      Title and Modifier.  When you add this extension, you get a third piece
+      of information by default: the Name that you choose to give each window.
+      You can remove any or all of these pieces, and you can add others.
+    </html:p><html:p>
+      Each window can be given a Name of your choosing.  The ONLY effect of
+      naming a window is that the Name will show up in the title text if the
+      Name component is included in your Pattern.
+    </html:p><html:p>
+      If you use the Bookmarks menu and select a Bookmarks folder, and then select
+      &quot;Open in Tabs&quot; from the submenu, the behavior will be different from
+      the Firefox default behavior.  The bookmarked pages will be opened
+      in tabs within a new window, and that window's Name will be the name of the
+      Bookmarks folder.  Because this modified functionality is useful even if the
+      folder has only one bookmark, the &quot;Open in Tabs&quot; option will be made
+      available to you even if there is only one bookmark in the folder.
+    </html:p><html:p>
+      <html:b>Go to the 'Options' tab to change the Pattern or Window Name</html:b>
+    </html:p>">
+<!ENTITY FireTitleRenameAlsoCaption "Did You Know?">
+<!ENTITY FireTitleRenameAlsoDescription "
+    You can also bring up the About/Options dialog with
+    <html:code>Ctrl-;</html:code> or by using the button from the custom
+    palatte.">
+<!ENTITY FireTitleWindowNameCaption "Window Name">
+<!ENTITY FireTitleWindowNameHeader "Set the name of the current window">
+<!ENTITY FireTitleWindowNameExplanation "This is what will appear if you use 'n' in your pattern">
+<!ENTITY FireTitleWindowNameUseDefault "Use opening window's name/title as a default">
+<!ENTITY FireTitlePatternCaption "Title Pattern">
+<!ENTITY FireTitlePatternFlagHeader "Each of these flags causes a piece of text to appear in the window title:">
+<!ENTITY FireTitlePatternFlagName "<html:b>n</html:b> = window (N)ame">
+<!ENTITY FireTitlePatternFlagTitle "<html:b>t</html:b> = document (T)itle">
+<!ENTITY FireTitlePatternFlagModifier "<html:b>m</html:b> = (M)odifier (This is defined by the application you are running, such as &quot;Mozilla Firefox Beta 1&quot;">
+<!ENTITY FireTitlePatternFlagWhen "<html:b>w</html:b> = (W)hen the window was opened">
+<!ENTITY FireTitlePatternFlagAge "<html:b>a</html:b> = (A)ge of the window">
+<!ENTITY FireTitlePatternFlagText "<html:b>[<html:em>text</html:em>]</html:b> = the string <html:em>text</html:em> (use &quot;]]&quot; for the literal character ']')">
+<!ENTITY FireTitlePatternModifierHeader "Each of these modifies the text controlled by the preceding flag:">
+<!ENTITY FireTitlePatternModifierNumber "<html:b><html:em>number</html:em></html:b> = the preceding flag's value will be limited to the first <html:em>number</html:em> characters <html:br/> (e.g. &quot;t10&quot; will display at most 10 characters from the document title)">
+<!ENTITY FireTitlePatternModifierBang "<html:b>!</html:b> = a default will be displayed when there preceding flag has no value">
+<!ENTITY FireTitlePatternDefault "&quot;ntm&quot; is the default pattern">
+<!ENTITY FireTitlePatternMakeDefault "Make this pattern the default for new windows">
+<!ENTITY FireTitlePatternApplyToOpen "Apply this pattern to all open windows">
+<!ENTITY FireTitlePreviewCaption "Title Preview">
+<!ENTITY FireTitlePreviewDescription "This is how the title of your window would
+   appear with this pattern">
+<!ENTITY FireTitlePreviewErrorDescription "Any errors produced by your pattern
+   will be displayed below">

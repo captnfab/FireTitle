@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head><!--
+Copyright 2011-2012 Fabien Givors (fabien.givors@chezlefab.net)
+Copyright 2008 Jonathan Nowitz (jonathannowitz@gmail.com)
+Copyright 2005 Jonathan Nowitz (jonathannowitz@gmail.com), Vanessa Fox, and
+Google, Inc.
+
+This file is part of FireTitle.
+
+FireTitle is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+FireTitle is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with FireTitle; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+-->
+
+<style>
+<!--
+body, td, th {
+  font-family: arial, sans-serif;
+  font-size: 83%;
+	}
+
+pre, code, tt {
+  font-size: 83%;
+}
+
+
+table {
+	margin-left:3%;
+	border: 1px solid #c3d9ff;
+	border-spacing:0;
+	}
+
+td {
+	border-right: 1px solid #C3d9ff;
+	border-bottom: 1px solid #C3d9ff;
+	background: #fff;
+	font-family:arial,sans-serif; 
+	text-align:left;
+	margin-left:3%;	
+	padding: 6px 6px 6px 12px;
+	vertical-align:top;
+	}
+
+td.alt {
+	background: #e8eefa;
+	vertical-align:top;
+	}
+
+.copy {
+	font-size:x-small;
+	}
+
+
+
+//-->
+</style>
+
+<title>Firetitle Help</title>
+
+</head><body>
+
+<h2>FireTitle Help</h2>
+
+<h3>Contents</h3>
+
+<a href="#Introduction">Introduction</a><br>
+<a href="#AccessingOptions">Opening the Options dialog</a><br>
+<a href="#NamingWindows">Naming the current window</a><br>
+<a href="#ChangingTitlePattern">Specifying global settings</a><br>
+<a href="#Copyright">Copyright and Licensing Information</a>
+
+
+<h3><a name="Introduction">Introduction</a></h3>
+
+<p><a name="Introduction">FireTitle allows you to control the text
+that appears in the title bar of your Firefox windows.</p>
+
+<p>You can specify this in two ways:</p>
+
+<ul>
+<li>give each window its <a href="#NamingWindows">own name</a>, which appears in the title. (You can also choose a pattern that does not display the window name).</li>
+<li><a href="#ChangingTitlePattern">specify a pattern</a> to format the title bar. </li>
+</ul>  
+
+<p>Because most operating systems and window managers let you browse through your windows by title (using mechanisms such as Alt-Tab and the system tray), naming each window makes it easier to find the window you are looking for.</p>
+
+<p>While the features of this extension may be fun and useful
+under a variety of different browsing styles, it was designed to
+empower the use of multiple browser windows, each of which contains
+multiple tabs grouped by functionality.  Users who run Firefox with
+multiple profiles get even more value from fixed text that you can
+specify on a per-profile basis.</p>
+
+
+<h3><a name="AccessingOptions">Opening the Options dialog</a></h3>
+
+<p>There are two ways to open the Options dialog.  It is bound to the ';'
+accelerator key (Ctrl-; on Windows or Linux, Command-; on Mac).
+You can also to click the FireTitle icon
+<img src="chrome://firetitle/skin/ft.png"> on the toolbar.
+(If this icon doesn't appear, just right-click on a toolbar and and choose
+<strong>Customize...</strong> to open the Customize Toolbar dialog.
+Then drag the FireTitle icon to a toolbar and click
+<strong>Done</strong>).</p> 
+
+<h3><a name="NamingWindows">Naming the current window</a></h3>
+
+<p>The simplest thing you can do with the FireTitle extension is give a window a name.  As you type in the new name of your window in the <a href="#AccessingOptions">Options dialog</a>, the <strong>Title Preview</strong> section shows you how this affects the title of your window. By default, the name of the window appears in the title bar before whatever normally displays. If you don't include the window name in the title pattern, this string won't appear in your window title.</p>
+
+
+<h3><a name="ChangingTitlePattern">Specifying global settings</a></h3>
+
+<p><strong>Setting a title pattern</strong></p>
+<p>The FireTitle extension replaces Firefox's default title bar text with text determined by a pattern you specify. Here is a list of
+the available pattern elements, and what they mean:</p>
+
+<table>
+<tr>
+<td><strong>n</strong></td>
+<td>window <strong>n</strong>ame</td>
+<td>The name of the browser window, which can be set as described in <a href="#NamingWindows">Naming Windows</a>.</td>
+</tr>
+<tr>
+<td class="alt"><strong>t</strong></td>
+<td class="alt">document <strong>t</strong>itle</td>
+<td class="alt">The title of the page in the browser(in the window or the
+active tab), as determined by Firefox.</td>
+</tr>
+
+<tr>
+<td><strong>m</strong></td>
+<td>document <strong>m</strong>odifier</td>
+<td>The standard text in the title bar, such as "Mozilla Firefox Beta 1".</td>
+</tr>
+
+<tr>
+<td class="alt"><strong>a</strong></td>
+<td class="alt"><strong>a</strong>ge of the window</td>
+<td class="alt">how long ago the window was created (in minutes or hours or days).  Useful if you know you want to find that window that you just opened (assuming your other windows
+had been around awhile before you opened it).</td>
+</tr>
+
+
+<tr>
+<td><strong>w</strong></td>
+<td><strong>w</strong>hen the window was opened</td>
+<td>This is basically the same information that age provides.  I find
+age more useful (and less verbose), but this option is here, if you
+prefer it.</td>
+</tr>
+
+<tr>
+<td class="alt"><strong>[<em>text</em>]</strong></td>
+<td class="alt">the text string</td>
+<td class="alt">If you want to put a piece of text into the title of every window,
+enclose that text in square brackets.  If you want to use a close
+bracket character <strong>]</strong>, you need to use two brackets <strong>]]</strong>.  <br><br>This might
+be a little confusing, but don't worry: The <strong>Title Preview</strong> section will show
+you what it thinks you are trying to display, and will show you
+errors if it is confused.  This functionality can be especially
+helpful if you run Firefox with more than one profile.  Simply put a
+distinguishing piece of text in the pattern in each profile, and you
+can tell at a glance which windows are running in which profile.</td>
+</tr>
+
+</table>
+
+
+<p>You can also place the following two modifiers just after a pattern element to change its behavior:</p>
+
+<table>
+<tr>
+<td><strong>number</strong></td>
+<td>maximum length</td>
+<td>The preceding element's value will be limited to the first
+<em>number</em> characters.  For example, <strong>t10</strong> will display at most
+10 characters from the document title.  This is clearly more useful
+for some elements (such as title) than for others (like fixed text),
+but it is implemented for all of them.</td>
+</tr>
+</table>
+
+
+<p>To emulate the default behavior of Firefox with respect to titles, you
+could set the pattern to <strong>tm</strong>.</p>
+
+<p>FireTitle's default pattern is <strong>ntm</strong>.  In other
+words, FireTitle simply prepends the name of the window to the title text.</p>
+
+<p>When you change the title pattern in the Options dialog and click <strong>OK</strong>, that change is propgated to all open windows.</p> 
+
+<p><strong>Setting the default name for new windows</strong></p>
+<p>You can set the default name for new windows you open as you are browsing as follows:</p>
+<ul>
+<li><strong>Window has no name by default</strong> - new windows use only the title pattern</li>
+<li><strong>Use opening window's name by default</strong> - new windows use the name of the opening window in addition to the title pattern</li>
+<li><strong>Use opening window's name/title by default</strong> - new windows use the name and title of the original window in addition to the title pattern.  This feature is somewhat verbose, but sometimes the context from which you opened a window is useful in determining what content the window contains.</li>
+</ul>
+
+
+
+<p>As you change the title pattern in the Options dialog, the Title Preview section shows you
+what the title of your last window would look like with the given
+pattern.  It tends to ignore what it can't understand (although any
+errors will appear in the error text area), and is not terribly
+fussy.</p>
+
+<h4><a name="Copyright">Copyright and Licensing Information</a></h4>
+<div class="copy">
+
+<p>
+FireTitle is Copyright 2011-2012 Fabien Givors (fabien.givors@chezlefab.net),
+2008 Jonathan Nowitz (jonathannowitz@gmail.com), Copyright 2005, 2006 Jonathan
+Nowitz (jonathannowitz@gmail.com) and Google, Inc.  This document is Copyright
+2008 Jonathan Nowitz, Copyright 2005, 2006 Jonathan Nowitz, Vanessa Fox, and
+Google, Inc.
+</p>
+
+<p>
+FireTitle is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version. 
+
+FireTitle is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with FireTitle; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+</p>
+</div>
+
+</body>

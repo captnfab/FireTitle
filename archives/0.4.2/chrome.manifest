@@ -1,0 +1,26 @@
+#	Copyright 2008 Jonathan Nowitz (jonathannowitz@gmail.com)
+#	Copyright 2005 Jonathan Nowitz (jonathannowitz@gmail.com) and Google, Inc.
+#	
+#	This file is part of FireTitle.
+#	
+#	FireTitle is free software; you can redistribute it and/or modify
+#	it under the terms of the GNU General Public License as published by
+#	the Free Software Foundation; either version 2 of the License, or
+#	(at your option) any later version.
+#	
+#	FireTitle is distributed in the hope that it will be useful,
+#	but WITHOUT ANY WARRANTY; without even the implied warranty of
+#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#	GNU General Public License for more details.
+#	
+#	You should have received a copy of the GNU General Public License
+#	along with FireTitle; if not, write to the Free Software
+#	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+# Package Content
+content firetitle jar:chrome/firetitle.jar!/content/
+
+overlay chrome://browser/content/browser.xul  chrome://firetitle/content/firetitle.xul
+
+locale firetitle en-US jar:chrome/firetitle.jar!/locale/en-US/
+skin firetitle classic/1.0 jar:chrome/firetitle.jar!/skin/
