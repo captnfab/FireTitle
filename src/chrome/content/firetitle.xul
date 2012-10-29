@@ -28,7 +28,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
     src="chrome://firetitle/content/firetitle.js"/>
   <script>
     var FIRETITLE_manager = new FireTitleManager();
-    FireTitleManager_setTitle();
     addEventListener("load", FireTitleManager_onLoad, false);
     addEventListener("unload", FireTitleManager_onUnload, false);
   </script>
