@@ -25,4 +25,5 @@ overlay chrome://browser/content/browser.xul  chrome://firetitle/content/firetit
 
 locale firetitle en-US chrome/locale/en-US/
 locale firetitle fr-FR chrome/locale/fr-FR/
+locale firetitle de-DE chrome/locale/de-DE/
 skin firetitle classic/1.0 chrome/skin/

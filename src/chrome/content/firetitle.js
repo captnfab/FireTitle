@@ -202,17 +202,20 @@ function FireTitleManager()
     return this.computeTitleFromPattern(this.getPattern(), this.getName(), content);
   };
 
-  this.update = function(name, pattern, makeDefault, global)
+  this.update = function(name, pattern, makeDefaultName, makeDefaultPattern, globalPattern)
   {
     this.setPattern(pattern);
     this.setName(name);
 
-    if (makeDefault)
+    if (makeDefaultName)
     {
-      this.setDefaultPattern(pattern);
       this.setDefaultName(name);
     }
-    if (global)
+    if (makeDefaultPattern)
+    {
+      this.setDefaultPattern(pattern);
+    }
+    if (globalPattern)
     {
       observerService.notifyObservers(null, "firetitle.sync-to-pattern", pattern);
     }

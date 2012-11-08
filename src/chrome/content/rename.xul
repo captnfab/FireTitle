@@ -53,12 +53,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
     <description class="header">&FireTitlePatternHeader;</description>
     <textbox id="FireTitleOptionsRenamePattern"
       onkeypress="FireTitleRename_onKeypress(event)" />
-    <vbox hidden="true">
-      <checkbox id="FireTitleOptionsRenameDefault"
-        label="&FireTitlePatternMakeDefault;" />
-      <checkbox id="FireTitleOptionsRenameGlobal"
-        label="&FireTitlePatternApplyToOpen;" />
-    </vbox>
+    <checkbox id="FireTitleOptionsRenameDefaultName"
+      label="&FireTitleNameMakeDefault;" checked="false" />
+    <checkbox id="FireTitleOptionsRenameDefaultPattern"
+      label="&FireTitlePatternMakeDefault;" checked="true" />
+    <checkbox id="FireTitleOptionsRenameGlobalPattern"
+      label="&FireTitlePatternApplyToOpen;" checked="true" />
   </groupbox>
   <groupbox>
     <caption label="&FireTitlePreviewCaption;" />

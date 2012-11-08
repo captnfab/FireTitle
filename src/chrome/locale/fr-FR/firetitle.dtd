@@ -8,6 +8,7 @@
 <!ENTITY FireTitleWindowNameLongDefault "Utiliser les noms/titres de la fenêtre mère">
 <!ENTITY FireTitlePatternMakeDefault "Faire de ce motif celui par défaut pour les nouvelles fenêtres">
 <!ENTITY FireTitlePatternApplyToOpen "Appliquer ce motif à toutes les fenêtres ouvertes">
+<!ENTITY FireTitleNameMakeDefault "Faire de ce nom celui par défaut pour les nouvelles fenêtres">
 <!ENTITY FireTitlePreviewCaption "Aperçu du titre">
 <!ENTITY FireTitlePreviewDescription "Aperçu avec le motif et le nom de fenêtre courants">
 <!ENTITY FireTitlePreviewErrorDescription "Erreurs dans le motif">

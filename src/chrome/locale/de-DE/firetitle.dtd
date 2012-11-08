@@ -1,0 +1,14 @@
+<!ENTITY FireTitleWindowNameCaption "Aktuelles Fenster">
+<!ENTITY FireTitleWindowNameHeader "Name des Fensters">
+<!ENTITY FireTitlePatternCaption "Allgemeine Einstellungen">
+<!ENTITY FireTitlePatternHeader "Titelmuster">
+<!ENTITY FireTitleDefaultWindowNameHeader "Standardname für neue Fenster">
+<!ENTITY FireTitleWindowNameNoDefault "Kein Name">
+<!ENTITY FireTitleWindowNameShortDefault "Name des vorigen Fensters">
+<!ENTITY FireTitleWindowNameLongDefault "Name und Titel des vorigen Fensters">
+<!ENTITY FireTitlePatternMakeDefault "Dieses Muster als Standard für neue Fenster verwenden">
+<!ENTITY FireTitlePatternApplyToOpen "Dieses Muster auf alle offenen Fenster anwenden">
+<!ENTITY FireTitleNameMakeDefault "Dieses Name als Standard für neue Fenster verwenden">
+<!ENTITY FireTitlePreviewCaption "Titelvorschau">
+<!ENTITY FireTitlePreviewDescription "Vorschau mit aktuellem Muster und Namen">
+<!ENTITY FireTitlePreviewErrorDescription "Fehler im Muster">

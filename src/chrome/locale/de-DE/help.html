@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head><!--
+Copyright 2011-2012 Fabien Givors (fabien.givors@chezlefab.net)
+Copyright 2008 Jonathan Nowitz (jonathannowitz@gmail.com)
+Copyright 2005 Jonathan Nowitz (jonathannowitz@gmail.com), Vanessa Fox, and
+Google, Inc.
+
+This file is part of FireTitle.
+
+FireTitle is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+FireTitle is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with FireTitle; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+-->
+
+<style>
+<!--
+body, td, th {
+  font-family: arial, sans-serif;
+  font-size: 83%;
+	}
+
+pre, code, tt {
+  font-size: 83%;
+}
+
+
+table {
+	margin-left:3%;
+	border: 1px solid #c3d9ff;
+	border-spacing:0;
+	}
+
+td {
+	border-right: 1px solid #C3d9ff;
+	border-bottom: 1px solid #C3d9ff;
+	background: #fff;
+	font-family:arial,sans-serif; 
+	text-align:left;
+	margin-left:3%;	
+	padding: 6px 6px 6px 12px;
+	vertical-align:top;
+	}
+
+td.alt {
+	background: #e8eefa;
+	vertical-align:top;
+	}
+
+.copy {
+	font-size:x-small;
+	}
+
+
+
+//-->
+</style>
+
+<title>FireTitle Hilfe</title>
+
+</head><body>
+
+<h2>FireTitle Hilfe</h2>
+
+<h3>Inhalt</h3>
+
+<a href="#Introduction">Einführung</a><br>
+<a href="#AccessingOptions">Optionsdialog öffnen</a><br>
+<a href="#NamingWindows">Namen des aktuellen Fensters setzen</a><br>
+<a href="#ChangingTitlePattern">Allgemeine Einstellungen vornehmen</a><br>
+<a href="#Copyright">Copyright und Lizenz</a>
+
+
+<h3><a name="Introduction">Einführung</a></h3>
+
+<p><a name="Introduction">Mit FireTitle können sie den Titel eines Firefox Fensters beeinflussen.</p>
+
+<p>FireTitle bietet Ihnen dazu zwei Möglichkeiten:</p>
+
+<ul>
+<li>Jedes Fenster kann einen <a href="#NamingWindows">eigenen Namen</a> erhalten, der im Titel benutzt wird. (Sie können allerdings auch ein Muster vorgeben, in dem der Name nicht benutzt wird).</li>
+<li>Für den Titel kann ein <a href="#ChangingTitlePattern">Muster</a> vorgegeben werden. </li>
+</ul>  
+
+<p>Die meisten Betriebssysteme und Fenstermanager bieten eine Möglichkeit, Fenster über ihrem Titel auszuwählen (z.B. mit Alt-Tab oder im Infobereich). Haben die Fenster aussagekräftige Namen, fällt die Suche nach einem Fenster viel leichter.</p>
+
+<p>FireTitle kann für Sie hilfreich sein, ganz unabhängig davon, wie Sie Ihren Browser benutzen. Am meisten werden allerdings vermutlich Benutzer profitieren, die häufig mit vielen Fenstern arbeiten, in denen jeweils mehrere Tabs zu einem gemeinsamen Thema geöffnet sind. Benutzer, die mehrere Profile benutzen, können für jedes Profil eigene Einstellungen vornehmen.</p>
+
+
+<h3><a name="AccessingOptions">Optionsdialog öffnen</a></h3>
+
+<p>Es gibt zwei Möglichkeiten, den Optionsdialog zu öffnen.  Mit dem Tastaturkürzel ';'
+(Ctrl-; unter Windows oder Linux, Command-; auf dem Mac).
+Oder Sie klicken auf das FireTitle Icon
+<img src="chrome://firetitle/skin/ft.png"> in der Symbolleiste.
+(Falls das Icon nicht zu sehen ist, können Sie mit einem Rechtsklick in der Symbolleiste und
+<strong>Anpassen...</strong> den Konfigurationsdialog für die Symbolleiste öffnen.
+Ziehen Sie dann das FireTitle Icon auf die Symbolleiste und klicken Sie abschließend auf
+<strong>Fertig</strong>).</p> 
+
+<h3><a name="NamingWindows">Namen des aktuellen Fensters setzen</a></h3>
+
+<p>Am einfachsten ist es, mit FireTitle einem Fenster einen Namen zu geben. Während Sie den Namen im <a href="#AccessingOptions">Optionsdialog</a> eingeben, zeigt die <strong>Titelvorschau</strong> den resultierenden Titel des Fensters an. Normalerweise steht der Name des Fensters am Anfang des Titels. Falls der Name allerdings nicht in Ihrem Titelmuster enthalten ist, wird er im Fenstertitel nicht angezeigt.</p>
+
+
+<h3><a name="ChangingTitlePattern">Allgemeine Einstellungen vornehmen</a></h3>
+
+<p><strong>Das Titelmuster festlegen</strong></p>
+<p>FireTitle ersetzt den normalen Titel eines Firefox Fenster durch einen Text, dessen Muster Sie festgelegt haben. Folgende Musterelemente stehen zur Verfügung:</p>
+
+<table>
+<tr>
+<td><strong>n</strong></td>
+<td>Fenster<strong>n</strong>ame</td>
+<td>Der Name des Browser-Fensters, der wie in <a href="#NamingWindows">Namen des aktuellen Fensters setzen</a> beschrieben festgelegt werden kann.</td>
+</tr>
+<tr>
+<td class="alt"><strong>t</strong></td>
+<td class="alt">Seiten<strong>t</strong>itel</td>
+<td class="alt">Der Titel der im Browser angezeigten Seite (im Fenster bzw. aktiven Tab), so wie er von Firefox ermittelt wurde.</td>
+</tr>
+
+<tr>
+<td><strong>m</strong></td>
+<td>Seiten<strong>m</strong>odifikator</td>
+<td>Der Standardtext im Fenstertitel, z.B. "Mozilla Firefox Beta 1".</td>
+</tr>
+
+<tr>
+<td class="alt"><strong>a</strong></td>
+<td class="alt"><strong>A</strong>lter des Fensters</td>
+<td class="alt">Wie lange gibt es dieses Fenster bereits (in Minuten, Stunden oder Tage).  Nützlich, wenn Sie das gerade geöffnete Fenster finden wollen (vorausgesetzt alle anderen Fenster existieren schon länger).</td>
+</tr>
+
+
+<tr>
+<td><strong>w</strong></td>
+<td><strong>W</strong>ann wurde das Fenster geöffnet</td>
+<td>Grundsätzlich die gleiche Information wie das Alter des Fensters.  Ich finde das Alter nützlicher (und kürzer), aber vielleicht bevorzugen Sie diese Option.</td>
+</tr>
+
+<tr>
+<td class="alt"><strong>[<em>text</em>]</strong></td>
+<td class="alt">Text</td>
+<td class="alt">Wollen Sie einen immer gleichen Text in alle Fenstertitel einfügen, dann schließen Sie ihn in rechteckige Klammern ein.  Um eine schließende rechteckige Klammer in den Text einzufügen <strong>]</strong>, müssen sie zwei davon hintereinander eingeben <strong>]]</strong>.  <br><br>Das mag zunächst verwirrend scheinen, doch keine Sorte: Die <strong>Titelvorschau</strong> wird Ihnen stets das aktuelle Ergebnis Ihre Eingabe anzeigen sowie Fehler, falls Sie unsicher sind.  Diese Funktionalität kann besonders hilfreich sein, falls Sie mehrere Profile benutzen.  Benutzen Sie einfach einen eindeutigen Text im jedem Profil, und schon können Sie mit einem Blick feststellen, welches Profil Sie gerade benutzen.</td>
+</tr>
+
+</table>
+
+
+<p>Sie können auch die beiden folgenden Modifikatoren hinter jedes der oben genannten Elemente setzen, um dessen Verhalten zu verändern:</p>
+
+<table>
+<tr>
+<td><strong>Zahl</strong></td>
+<td>maximale Länge</td>
+<td>Die Länge des Elements wird auf 
+<em>Zahl</em> Zeichen begrenzt.  Zum Beispiel wird <strong>t10</strong> höchstens die ersten 10 Zeichen des Seitentitels anzeigen.  Dieser Modifikator ist für einige Elemente (z.B. Titel) eindeutig nützlicher als für andere (z.B. festen Text), steht aber für alle zur Verfügung.</td>
+</tr>
+<tr>
+<td class="alt"><strong>!</strong></td>
+<td class="alt">immer darstellen</td>
+<td class="alt">Manche Element resultieren manchmal in keinerlei Text. Zum Beispiel:
+<ul>
+<li>Das Element <strong>a</strong> erzeugt keinen Text, bis das Fenster mindestens eine Minute alt ist.
+Mit <strong>a!</strong> wird dann <strong>0 Minuten</strong> dargestellt.</li>
+<br>
+
+Aus Sicht von Firefox haben manche Seiten keinen Titel. 
+<li><strong>t</strong> liefert dann keinen Text, aber <strong>t!</strong> führt zur Anzeige von <strong>(Ohne Titel)</strong>.</li> <li><strong>n!</strong> führt dann zur Anzeige
+ <strong>KEIN NAME</strong> </li>
+<li><strong>m!</strong> führt dann zur Anzeige <strong>KEIN MODIFIKATOR</strong>.</li>
+</ul>  Falls Sie es beunruhigend finden, dass dem Fenstertitel manchmal ein ganzer Block fehlt, benutzen Sie diesen Modifikator.</td>
+</tr>
+</table>
+
+
+<p>Benutzen Sie das Titelmuster <strong>tm</strong>, um das normale Verhalten von Firefox nachzuahmen.</p>
+
+<p>Die Voreinstellung für das Titelmuster in FireTitle ist <strong>ntm</strong>.  FireTitle fügt also standardmäßig den Namen des Fensters vor dem normalen Titel ein.</p>
+
+<p>Wenn Sie im Optionsdialog das Titelmuster ändern und <strong>OK</strong> klicken, werden alle offenen Fenster aktualisiert.</p> 
+
+<p><strong>Den Standardnamen für ein neues Fenster setzen</strong></p>
+<p>Beim Namen eines neuen Fenster können Sie zwischen drei Möglichkeiten wählen:</p>
+<ul>
+<li><strong>Kein Name</strong> - Neue Fenster benutzten lediglich das Titelmuster</li>
+<li><strong>Name des vorigen Fensters</strong> - Neue Fenster benutzen den Namen des usprünglichen Fenster in Kombination mit dem Titelmuster</li>
+<li><strong>Name und Titel des vorigen Fensters</strong> - Neue Fenster benutzen den Namen und den Titel des usprünglichen Fenster in Kombination mit dem Titelmuster. Dies führt zu längeren Titeln, doch manchmal liefern diese Informationen über den Ursprung eines Fenster hilfreiche Hinweise auf seinen Inhalt</li>
+</ul>
+
+
+<p>Schon während Sie das Titelmuster im Optionsdialog eingeben, zeigt Ihnen die Titelvorschau, wie der Titel Ihres Fensters mit diesem Muster aussehen würde. Unzulässige Eingaben werden dabei so weit als möglich ignoriert (aber im Fehlerbereich angezeigt).</p>
+
+<h4><a name="Copyright">Copyright und Lizenz</a></h4>
+<div class="copy">
+
+<p>
+FireTitle is Copyright 2011-2012 Fabien Givors (fabien.givors@chezlefab.net),
+2008 Jonathan Nowitz (jonathannowitz@gmail.com), Copyright 2005, 2006 Jonathan
+Nowitz (jonathannowitz@gmail.com) and Google, Inc.  This document is Copyright
+2008 Jonathan Nowitz, Copyright 2005, 2006 Jonathan Nowitz, Vanessa Fox, and
+Google, Inc. Copyright of the German localization 2012 Malte Forkel.
+</p>
+
+<p>
+FireTitle is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version. 
+
+FireTitle is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with FireTitle; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+</p>
+</div>
+
+</body>

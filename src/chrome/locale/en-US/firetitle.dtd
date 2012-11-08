@@ -8,6 +8,7 @@
 <!ENTITY FireTitleWindowNameLongDefault "Use opening window's name/title as a default">
 <!ENTITY FireTitlePatternMakeDefault "Make this pattern the default for new windows">
 <!ENTITY FireTitlePatternApplyToOpen "Apply this pattern to all open windows">
+<!ENTITY FireTitleNameMakeDefault "Make this name the default for new windows">
 <!ENTITY FireTitlePreviewCaption "Title Preview">
 <!ENTITY FireTitlePreviewDescription "Preview with current pattern and window name">
 <!ENTITY FireTitlePreviewErrorDescription "Pattern errors">

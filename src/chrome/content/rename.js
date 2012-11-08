@@ -58,15 +58,7 @@ function FireTitleRename_onLoad()
   var pattern = this.ftManager.getPattern();
   patternBox.value = pattern;
 
-  // Is "default pattern" checked by default?
-  var defaultBox = document.getElementById("FireTitleOptionsRenameDefault");
-  defaultBox.checked = true;
-
-  // Is "global pattern" checked by default?
-  var globalBox = document.getElementById("FireTitleOptionsRenameGlobal");
-  globalBox.checked = true;
-
-  FireTitleRename_doPreview(this.ftOpener, this.ftManager);
+  FireTitleRename_doPreview(window.ftOpener, window.ftManager);
 }
 
 // Compute preview
@@ -80,6 +72,7 @@ function FireTitleRename_doPreview(op, man)
   document.getElementById("FireTitleNamePreview").value = preview;
 
 }
+
 
 // Update preview
 function FireTitleRename_onKeypress(event)
@@ -96,17 +89,13 @@ function FireTitleRename_onKeypress(event)
 // Update window's parameter when clicking on Ok
 function FireTitleRename_onAccept()
 {
-  // FIXME: huh?
-  var FIRETITLE_IGNORE_PATTERN_OPTIONS = true;
-
   var name = document.getElementById("FireTitleRenameName").value;
   var pattern = document.getElementById("FireTitleOptionsRenamePattern").value;
-  var def = document.getElementById("FireTitleOptionsRenameDefault").checked;
-  var global = document.getElementById("FireTitleOptionsRenameGlobal").checked;
+  var defname = document.getElementById("FireTitleOptionsRenameDefaultName").checked;
+  var defpattern = document.getElementById("FireTitleOptionsRenameDefaultPattern").checked;
+  var globalpattern = document.getElementById("FireTitleOptionsRenameGlobalPattern").checked;
 
-  this.ftManager.update(name, pattern,
-      FIRETITLE_IGNORE_PATTERN_OPTIONS || def,
-      FIRETITLE_IGNORE_PATTERN_OPTIONS || global);
+  this.ftManager.update(name, pattern, defname, defpattern, globalpattern);
 }
 
 function FireTitleRename_onHelp()

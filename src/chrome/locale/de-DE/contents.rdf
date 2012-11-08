@@ -24,14 +24,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
          xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
 
   <RDF:Seq about="urn:mozilla:locale:root">
-    <!-- The name of the package in the chrome, e.g., google-sample -->
-    <RDF:li resource="urn:mozilla:locale:fr-FR"/>
+    <RDF:li resource="urn:mozilla:locale:de-DE"/>
   </RDF:Seq>
 
-  <RDF:Description about="urn:mozilla:locale:fr-FR">
+  <RDF:Description about="urn:mozilla:locale:de-DE">
     <chrome:packages>
-      <RDF:Seq about="urn:mozilla:locale:fr-FR:packages">
-        <RDF:li resource="urn:mozilla:locale:fr-FR:firetitle"/>
+      <RDF:Seq about="urn:mozilla:locale:de-DE:packages">
+        <RDF:li resource="urn:mozilla:locale:de-DE:firetitle"/>
       </RDF:Seq>
     </chrome:packages>
   </RDF:Description>
