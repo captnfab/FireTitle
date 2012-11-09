@@ -8,7 +8,7 @@
 <!ENTITY FireTitleWindowNameLongDefault "Name und Titel des vorigen Fensters">
 <!ENTITY FireTitlePatternMakeDefault "Dieses Muster als Standard für neue Fenster verwenden">
 <!ENTITY FireTitlePatternApplyToOpen "Dieses Muster auf alle offenen Fenster anwenden">
-<!ENTITY FireTitleNameMakeDefault "Dieses Name als Standard für neue Fenster verwenden">
+<!ENTITY FireTitleNameMakeDefault "Diesen Namen als Standard für neue Fenster verwenden">
 <!ENTITY FireTitlePreviewCaption "Titelvorschau">
 <!ENTITY FireTitlePreviewDescription "Vorschau mit aktuellem Muster und Namen">
 <!ENTITY FireTitlePreviewErrorDescription "Fehler im Muster">

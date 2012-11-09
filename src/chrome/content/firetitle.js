@@ -84,6 +84,30 @@ function FireTitleManager()
     return defaultPattern;
   };
 
+  // Set default Separator to preferences
+  this.setDefaultSeparator = function(separator)
+  {
+    if (!prefs)
+    {
+      alert("null preferences object");
+      return;
+    }
+    prefs.setCharPref("firetitle.separator.default", separator);
+  };
+  // Get default Separator from preferences
+  this.getDefaultSeparator = function()
+  {
+    var defaultSeparator;
+    if (prefs.prefHasUserValue("firetitle.separator.default"))
+    {
+      defaultSeparator = prefs.getCharPref("firetitle.separator.default");
+    }
+    else
+    {
+      defaultSeparator = " | ";
+    }
+    return defaultSeparator;
+  };
 
   // Set Name to window's session if not null
   this.setName = function(name)
@@ -139,7 +163,7 @@ function FireTitleManager()
   this.computeTitleFromPattern = function(pattern, name, content)
   {
     var title = "";
-    var separator = " - ";//FireTitleManager.getSeparator(content);
+    var separator = this.getDefaultSeparator();
 
 
     for (var i = 0; i < pattern.length; i++)
