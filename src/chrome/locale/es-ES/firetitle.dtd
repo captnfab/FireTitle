@@ -1,0 +1,16 @@
+<!ENTITY FireTitleGrpWinCurNaming           "Current Window">
+<!ENTITY FireTitleDscWinCurName             "Window Name">
+<!ENTITY FireTitleDscWinCurPattern          "Title Pattern">
+<!ENTITY FireTitleDscWinCurPre              "Preview">
+
+<!ENTITY FireTitleGrpWinExiNaming           "Already existing windows">
+<!ENTITY FireTitleDscApplyGlobalPattern     "Apply this pattern to already opened windows">
+
+<!ENTITY FireTitleGrpWinNewNaming           "New Windows">
+<!ENTITY FireTitleDscWinNewName             "Default Name">
+<!ENTITY FireTitleDscWinNewPattern          "Default Title Pattern">
+<!ENTITY FireTitleDscWinNewSamePattern      "Use current window title pattern">
+<!ENTITY FireTitleDscWinNewPre              "Preview">
+
+<!ENTITY FireTitleGrpMisc                   "Options">
+<!ENTITY FireTitleDscMiscSeparator          "Separator">
