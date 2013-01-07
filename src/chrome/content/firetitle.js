@@ -24,131 +24,177 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-function FireTitleManager()
+var FireTitle =
 {
-  // Session object that stores name in session manager
-  var sessionStore = Components.classes["@mozilla.org/browser/sessionstore;1"]
-    .getService(Components.interfaces.nsISessionStore);
-
-  var observerService = Components.classes["@mozilla.org/observer-service;1"]
-    .getService(Components.interfaces.nsIObserverService);
-  observerService.addObserver(this, "firetitle.sync-to-pattern", false);
-
   // Handle plugin configuration
-  var prefs = Components.classes["@mozilla.org/preferences;1"]
-    .getService(Components.interfaces.nsIPrefBranch);
+  prefs: null,
+  // Handle per-window prefs
+  sessionStore: null,
+  // Handle pattern-sync
+  observerService: null,
 
+  startup: function()
+  {
+    this.prefs = Components.classes["@mozilla.org/preferences-service;1"]
+      .getService(Components.interfaces.nsIPrefService)
+      .getBranch("extensions.firetitle.");
+    this.prefs.QueryInterface(Components.interfaces.nsIPrefBranch2);
+    this.prefs.addObserver("", this, false);
+
+    this.sessionStore = Components.classes["@mozilla.org/browser/sessionstore;1"]
+      .getService(Components.interfaces.nsISessionStore);
+
+    this.observerService = Components.classes["@mozilla.org/observer-service;1"]
+      .getService(Components.interfaces.nsIObserverService);
+    this.observerService.addObserver(this, "extensions.firetitle.sync-to-pattern", false);
+
+    document.getElementById("content").updateTitlebar =
+      function()
+      {
+        document.title = window.FireTitle.computeTitle(document.getElementById("content"));
+      };
+
+    document.getElementById("content").addEventListener("DOMTitleChanged", window.FireTitle.settitle(), false);
+  },
+  shutdown: function()
+  {
+    this.prefs.removeObserver("", this);
+    this.observerService.removeObserver(this, "extensions.firetitle.sync-to-pattern");
+  },
+
+  settitle: function()
+  {
+    document.getElementById("content").updateTitlebar();
+  },
+  settitle2: function()
+  {
+    alert("hop");
+  },
 
   // Set default Name to preferences
-  this.setDefaultName = function(name)
+  setDefaultName: function(name)
   {
-    prefs.setCharPref("firetitle.name.default", name);
-  };
+    this.prefs.setCharPref("extensions.firetitle.name.default", name);
+  },
   // Get default Name from preferences
-  this.getDefaultName = function()
+  getDefaultName: function()
   {
     var defaultName;
-    if (prefs.prefHasUserValue("firetitle.name.default"))
+    if (this.prefs.prefHasUserValue("extensions.firetitle.name.default"))
     {
-      defaultName = prefs.getCharPref("firetitle.name.default");
+      defaultName = this.prefs.getCharPref("extensions.firetitle.name.default");
     }
     else
     {
       defaultName = "";
     }
     return defaultName;
-  };
+  },
 
   // Set default Pattern to preferences
-  this.setDefaultPattern = function(pattern)
+  setDefaultPattern: function(pattern)
   {
-    if (!prefs)
+    if (!this.prefs)
     {
       alert("null preferences object");
       return;
     }
-    prefs.setCharPref("firetitle.pattern.default", pattern);
-  };
+    this.prefs.setCharPref("extensions.firetitle.pattern.default", pattern);
+  },
   // Get default Pattern from preferences
-  this.getDefaultPattern = function()
+  getDefaultPattern: function()
   {
     var defaultPattern;
-    if (prefs.prefHasUserValue("firetitle.pattern.default"))
+    if (this.prefs.prefHasUserValue("extensions.firetitle.pattern.default"))
     {
-      defaultPattern = prefs.getCharPref("firetitle.pattern.default");
+      defaultPattern = this.prefs.getCharPref("extensions.firetitle.pattern.default");
     }
     else
     {
       defaultPattern = "ntm";
     }
     return defaultPattern;
-  };
+  },
 
   // Set default Separator to preferences
-  this.setDefaultSeparator = function(separator)
+  setDefaultSeparator: function(separator)
   {
-    if (!prefs)
+    if (!this.prefs)
     {
       alert("null preferences object");
       return;
     }
-    prefs.setCharPref("firetitle.separator.default", separator);
-  };
+    this.prefs.setCharPref("extensions.firetitle.separator.default", separator);
+  },
   // Get default Separator from preferences
-  this.getDefaultSeparator = function()
+  getDefaultSeparator: function()
   {
     var defaultSeparator;
-    if (prefs.prefHasUserValue("firetitle.separator.default"))
+    if (this.prefs.prefHasUserValue("extensions.firetitle.separator.default"))
     {
-      defaultSeparator = prefs.getCharPref("firetitle.separator.default");
+      defaultSeparator = this.prefs.getCharPref("extensions.firetitle.separator.default");
     }
     else
     {
       defaultSeparator = " | ";
     }
     return defaultSeparator;
-  };
+  },
 
   // Set Name to window's session if not null
-  this.setName = function(name)
+  setName: function(name)
   {
-    sessionStore.setWindowValue(window, "ftlWinName", name);
-  };
+    this.sessionStore.setWindowValue(window, "ftlWinName", name);
+  },
   // Get Name from window's session (or default to getDefaultName())
-  this.getName = function()
+  getName: function()
   {
-    var name;
-    name = sessionStore.getWindowValue(window, "ftlWinName");
+    var name = null;
+    try
+    {
+      name = this.sessionStore.getWindowValue(window, "ftlWinName");
+    }
+    catch(e)
+    {
+      name = null;
+    }
 
     if(!name)
     {
       name = this.getDefaultName();
     }
     return name;
-  };
+  },
 
   // Get Document Title from content
-  this.getDocumentTitle = function(content)
+  getDocumentTitle: function(content)
   {
     return content.contentDocument.title;
-  };
+  },
 
   // Get Modifier from content
-  this.getModifier = function(content)
+  getModifier: function(content)
   {
     return content.ownerDocument.documentElement.getAttribute("titlemodifier");
-  }
+  },
 
   // Set Pattern to window's session
-  this.setPattern = function(pattern)
+  setPattern: function(pattern)
   {
-    sessionStore.setWindowValue(window, "ftlWinPatt", pattern);
-  };
+    this.sessionStore.setWindowValue(window, "ftlWinPatt", pattern);
+  },
   // Get Pattern from window's session (or default getDefaultPattern())
-  this.getPattern = function()
+  getPattern: function()
   {
-    var pattern;
-    pattern = sessionStore.getWindowValue(window, "ftlWinPatt");
+    var pattern = null;
+    try
+    {
+      pattern = this.sessionStore.getWindowValue(window, "ftlWinPatt");
+    }
+    catch(e)
+    {
+      pattern = null;
+    }
 
     if(!pattern)
     {
@@ -156,14 +202,12 @@ function FireTitleManager()
     }
     return pattern;
 
-  };
+  },
 
 
-
-  this.computeTitleFromPattern = function(pattern, name, content)
+  computeTitleFromPattern: function(pattern, name, content, separator)
   {
     var title = "";
-    var separator = this.getDefaultSeparator();
 
 
     for (var i = 0; i < pattern.length; i++)
@@ -182,6 +226,16 @@ function FireTitleManager()
           // Title
           match = this.getDocumentTitle(content);
           break;
+/*
+        case 'T':
+          // Number of tabs
+          match = content."TODO";
+          break;
+        case 'g':
+          // Group name
+          match = "TODO";
+          break;
+*/
         case 'm':
           // Modifier
           match = this.getModifier(content);
@@ -219,80 +273,54 @@ function FireTitleManager()
       title = title ? title + separator + match : match
     }
     return title;
-  };
+  },
 
-  this.computeTitle = function(content)
+  computeTitle: function(content)
   {
-    return this.computeTitleFromPattern(this.getPattern(), this.getName(), content);
-  };
+    return this.computeTitleFromPattern(this.getPattern(), this.getName(), content, this.getDefaultSeparator());
+  },
 
-  this.update = function(name, pattern, makeDefaultName, makeDefaultPattern, globalPattern)
+  update: function(sep, name, pattern, defname, defpat, applypat)
   {
-    this.setPattern(pattern);
+    this.setDefaultSeparator(sep);
+
     this.setName(name);
+    this.setPattern(pattern);
 
-    if (makeDefaultName)
+    this.setDefaultName(defname);
+    this.setDefaultPattern(defpat);
+
+    if (applypat)
     {
-      this.setDefaultName(name);
+      this.observerService.notifyObservers(null, "extensions.firetitle.sync-to-pattern", pattern);
     }
-    if (makeDefaultPattern)
-    {
-      this.setDefaultPattern(pattern);
-    }
-    if (globalPattern)
-    {
-      observerService.notifyObservers(null, "firetitle.sync-to-pattern", pattern);
-    }
-    FireTitleManager_setTitle();
-  };
+    this.settitle();
+  },
 
   // Listen to topic "firetitle.sync-to-pattern" for global changes
-  this.observe = function(subject, topic, data)
+  observe: function(subject, topic, data)
   {
-    if (topic == "firetitle.sync-to-pattern")
+    if (topic == "extensions.firetitle.sync-to-pattern")
     {
       this.setPattern(data);
-      FireTitleManager_setTitle();
+      this.settitle();
     }
-  }
-
-  var ftm = this;
-
-  document.getElementById("content").updateTitlebar =
-    function()
+    else if (topic == "nsPref:changed" || topic == "extensions.firetitle.update")
     {
-      document.title = ftm.computeTitle(this);
-    };
+      this.settitle();
+    }
+  },
 
+  showPrefs: function()
+  {
+    window.openDialog("chrome://firetitle/content/rename.xul",
+        "FireTitleRename",
+        "modal,centerscreen,chrome,resizable=no");
+  },
 }
 
-
-/*********************************************************************************
- * Public API & Helpers
- */
-
-function FireTitleManager_setTitle()
-{
-  document.getElementById("content").updateTitlebar();
-}
-
-function FireTitleManager_onLoad(event)
-{
-  document.getElementById("content").addEventListener("DOMTitleChanged", FireTitleManager_setTitle, false);
-}
-
-function FireTitleManager_onUnload(event)
-{
-  var ftm = FIRETITLE_manager;
-  ftm.observerService.removeObserver(ftm, "firetitle.sync-to-pattern");
-}
-
-function FireTitleRename_show()
-{
-  window.openDialog("chrome://firetitle/content/rename.xul",
-      "FireTitleRename",
-      "modal,centerscreen,chrome,resizable=no");
-}
+window.addEventListener("load", function(e) { FireTitle.startup(); }, false);
+window.addEventListener("unload", function(e) { FireTitle.shutdown(); }, false);
 
 
 // vim:set nospell tw=80 foldmethod=marker foldmarker={,}:

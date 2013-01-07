@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
 Copyright 2011-2012 Fabien Givors (fabien.givors@chezlefab.net)
@@ -22,19 +22,16 @@ along with FireTitle; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 -->
 
+<!DOCTYPE overlay >
 <overlay id="firetitle-overlay"
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-  <script type="application/x-javascript" 
+
+  <script type="application/x-javascript"
     src="chrome://firetitle/content/firetitle.js"/>
-  <script>
-    var FIRETITLE_manager = new FireTitleManager();
-    addEventListener("load", FireTitleManager_onLoad, false);
-    addEventListener("unload", FireTitleManager_onUnload, false);
-  </script>
 
   <commandset id="mainCommandSet">
     <command id="cmd_fireTitleRename"
-      oncommand="FireTitleRename_show();"/>
+      oncommand="FireTitle.showPrefs();"/>
   </commandset>
 
   <keyset id="mainKeyset">
@@ -49,8 +46,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
       image="chrome://firetitle/skin/ft.png" />
   </toolbarpalette>
 
-  <menupopup id="menu_ToolsPopup"> 
-    <menuitem id="firetitle-test" label="FireTitle" 
-      oncommand="FireTitleRename_show();"/> 
+  <menupopup id="menu_ToolsPopup">
+    <menuitem id="firetitle-test" label="FireTitle"
+      oncommand="FireTitle.showPrefs();"/>
   </menupopup>
 </overlay>

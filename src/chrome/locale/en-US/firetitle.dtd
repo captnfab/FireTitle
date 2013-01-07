@@ -1,14 +1,16 @@
-<!ENTITY FireTitleWindowNameCaption "Current Window Name">
-<!ENTITY FireTitleWindowNameHeader "Set the name of the current window">
-<!ENTITY FireTitlePatternCaption "Global Settings">
-<!ENTITY FireTitlePatternHeader "Set the title pattern">
-<!ENTITY FireTitleDefaultWindowNameHeader "Default name for new windows">
-<!ENTITY FireTitleWindowNameNoDefault "Window has no name by default">
-<!ENTITY FireTitleWindowNameShortDefault "Use opening window's name as a default">
-<!ENTITY FireTitleWindowNameLongDefault "Use opening window's name/title as a default">
-<!ENTITY FireTitlePatternMakeDefault "Make this pattern the default for new windows">
-<!ENTITY FireTitlePatternApplyToOpen "Apply this pattern to all open windows">
-<!ENTITY FireTitleNameMakeDefault "Make this name the default for new windows">
-<!ENTITY FireTitlePreviewCaption "Title Preview">
-<!ENTITY FireTitlePreviewDescription "Preview with current pattern and window name">
-<!ENTITY FireTitlePreviewErrorDescription "Pattern errors">
+<!ENTITY FireTitleGrpWinCurNaming           "Current Window">
+<!ENTITY FireTitleDscWinCurName             "Window Name">
+<!ENTITY FireTitleDscWinCurPattern          "Title Pattern">
+<!ENTITY FireTitleDscWinCurPre              "Preview">
+
+<!ENTITY FireTitleGrpWinExiNaming           "Already existing windows">
+<!ENTITY FireTitleDscApplyGlobalPattern     "Apply this pattern to already opened windows">
+
+<!ENTITY FireTitleGrpWinNewNaming           "New Windows">
+<!ENTITY FireTitleDscWinNewName             "Default Name">
+<!ENTITY FireTitleDscWinNewPattern          "Default Title Pattern">
+<!ENTITY FireTitleDscWinNewSamePattern      "Use current window title pattern">
+<!ENTITY FireTitleDscWinNewPre              "Preview">
+
+<!ENTITY FireTitleGrpMisc                   "Options">
+<!ENTITY FireTitleDscMiscSeparator          "Separator">

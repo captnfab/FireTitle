@@ -22,47 +22,66 @@ along with FireTitle; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 -->
 
-<?xml-stylesheet href="chrome://global/skin/" type="text/css"?> 
-<?xml-stylesheet href="chrome://firetitle/skin/firetitle.css" type="text/css"?> 
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://firetitle/skin/firetitle.css" type="text/css"?>
 <!DOCTYPE overlay [
 <!ENTITY % ftDtd SYSTEM "chrome://firetitle/locale/firetitle.dtd"> %ftDtd;
 ]>
 
 
-<dialog id="FireTitleRenameDialog"
+<prefwindow id="FireTitleRenameDialog"
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
   xmlns:html="http://www.w3.org/1999/xhtml"
-  ondialogaccept="FireTitleRename_onAccept(event);"
+  onunload="FireTitleRename_onAccept(event);"
   onload="FireTitleRename_onLoad(event);"
-  ondialoghelp="FireTitleRename_onHelp(event);"
   title="FireTitle Options"
-  maxwidth="600px"
-  buttons="accept,cancel,help">
+  buttons="accept,cancel,help"
+  ondialoghelp="FireTitleRename_onHelp(event);"
+  maxwidth="600px">
 
-  <script type="application/x-javascript"
-    src="chrome://firetitle/content/rename.js"/>
+  <prefpane helpURI="chrome://firetitle/locale/help.html">
 
-  <groupbox>
-    <caption label="&FireTitleWindowNameCaption;" />
-    <description class="header">&FireTitleWindowNameHeader;</description>
-    <textbox id="FireTitleRenameName"
-      onkeypress="FireTitleRename_onKeypress(event)" />
-  </groupbox>
-  <groupbox>
-    <caption label="&FireTitlePatternCaption;" />
-    <description class="header">&FireTitlePatternHeader;</description>
-    <textbox id="FireTitleOptionsRenamePattern"
-      onkeypress="FireTitleRename_onKeypress(event)" />
-    <checkbox id="FireTitleOptionsRenameDefaultName"
-      label="&FireTitleNameMakeDefault;" checked="false" />
-    <checkbox id="FireTitleOptionsRenameDefaultPattern"
-      label="&FireTitlePatternMakeDefault;" checked="true" />
-    <checkbox id="FireTitleOptionsRenameGlobalPattern"
-      label="&FireTitlePatternApplyToOpen;" checked="true" />
-  </groupbox>
-  <groupbox>
-    <caption label="&FireTitlePreviewCaption;" />
-    <description class="header">&FireTitlePreviewDescription;</description>
-    <textbox id="FireTitleNamePreview" readonly="true" />
-  </groupbox>
-</dialog>
+    <preferences>
+      <preference id="pref-separator" name="extensions.firetitle.separator" type="string" />
+      <preference id="pref-pattern"   name="extensions.firetitle.pattern"   type="string" />
+      <preference id="pref-name"      name="extensions.firetitle.name"      type="string" />
+    </preferences>
+
+    <groupbox>
+      <caption label="&FireTitleGrpWinCurNaming;" />
+      <description class="header">&FireTitleDscWinCurName;</description>
+      <textbox id="FireTitleOptWinCurName" onkeypress="FireTitleRename_onKeypress(event)" />
+      <description class="header">&FireTitleDscWinCurPattern;</description>
+      <textbox id="FireTitleOptWinCurPattern" onkeypress="FireTitleRename_onKeypress(event)" />
+      <description class="header">&FireTitleDscWinCurPre;</description>
+      <textbox id="FireTitlePreWinCur" readonly="true" />
+    </groupbox>
+
+    <groupbox>
+      <caption label="&FireTitleGrpWinExiNaming;" />
+      <checkbox id="FireTitleOptApplyGlobalPattern" label="&FireTitleDscApplyGlobalPattern;" />
+    </groupbox>
+
+    <groupbox>
+      <caption label="&FireTitleGrpWinNewNaming;" />
+      <description class="header">&FireTitleDscWinNewName;</description>
+      <textbox id="FireTitleOptWinNewName" onkeypress="FireTitleRename_onKeypress(event)" />
+      <description class="header">&FireTitleDscWinNewPattern;</description>
+      <textbox id="FireTitleOptWinNewPattern" onkeypress="FireTitleRename_onKeypress(event)" />
+      <checkbox id="FireTitleOptWinNewSamePattern" onclick="FireTitleRename_onClick(event)" label="&FireTitleDscWinNewSamePattern;" />
+      <description class="header">&FireTitleDscWinNewPre;</description>
+      <textbox id="FireTitlePreWinNew" readonly="true" />
+    </groupbox>
+
+    <groupbox>
+      <caption label="&FireTitleGrpMisc;" />
+      <description class="header">&FireTitleDscMiscSeparator;</description>
+      <textbox id="FireTitleOptMiscSeparator" onkeypress="FireTitleRename_onKeypress(event)" />
+    </groupbox>
+  </prefpane>
+
+  <button label="Hop" onclick="FireTitleRename_onHelp(event);"/>
+
+  <script type="application/x-javascript" src="chrome://firetitle/content/rename.js"/>
+
+</prefwindow>

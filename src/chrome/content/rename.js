@@ -22,10 +22,10 @@
 
 function FireTitleRename_onLoad()
 {
-  if (window.opener.FIRETITLE_manager)
+  if (window.opener.FireTitle)
   {
     this.ftOpener = window.opener;
-    this.ftManager = window.opener.FIRETITLE_manager;
+    this.ftManager = window.opener.FireTitle;
   }
   else
   {
@@ -42,38 +42,82 @@ function FireTitleRename_onLoad()
     if (windowMediator)
     {
       var browser = windowMediator.getMostRecentWindow("navigator:browser");
-      if (browser && browser.FIRETITLE_manager)
+      if (browser && browser.FireTitle)
       {
         this.ftOpener = browser;
-        this.ftManager = browser.FIRETITLE_manager;
+        this.ftManager = browser.FireTitle;
       }
     }
   }
 
-  var nameBox = document.getElementById("FireTitleRenameName");
-  var name = this.ftManager.getName();
-  nameBox.value = name;
+  var sepBox = document.getElementById("FireTitleOptMiscSeparator");
+  var sep = this.ftManager.getDefaultSeparator();
+  sepBox.value = sep;
 
-  var patternBox= document.getElementById("FireTitleOptionsRenamePattern");
-  var pattern = this.ftManager.getPattern();
-  patternBox.value = pattern;
+  var curnameBox = document.getElementById("FireTitleOptWinCurName");
+  var curname = this.ftManager.getName();
+  curnameBox.value = curname;
 
+  var curpatternBox= document.getElementById("FireTitleOptWinCurPattern");
+  var curpattern = this.ftManager.getPattern();
+  curpatternBox.value = curpattern;
+
+  var newnameBox = document.getElementById("FireTitleOptWinNewName");
+  var newname = this.ftManager.getDefaultName();
+  newnameBox.value = newname;
+
+  var newpattern = this.ftManager.getDefaultPattern();
+  var newsamepatBox= document.getElementById("FireTitleOptWinNewSamePattern");
+  newsamepat = (newpattern == curpattern);
+  newsamepatBox.checked = newsamepat;
+
+  var newpatternBox= document.getElementById("FireTitleOptWinNewPattern");
+  newpatternBox.value = newpattern;
+  newpatternBox.readonly = newsamepat
+
+  var applyglobal = document.getElementById("FireTitleOptApplyGlobalPattern");
+  applyglobal.checked = true;
   FireTitleRename_doPreview(window.ftOpener, window.ftManager);
 }
 
 // Compute preview
 function FireTitleRename_doPreview(op, man)
 {
-  var content = op.document.getElementById("content");
-  var name = document.getElementById("FireTitleRenameName").value;
-  var pattern = document.getElementById("FireTitleOptionsRenamePattern").value;
+  var sep = document.getElementById("FireTitleOptMiscSeparator").value;
 
-  var preview = man.computeTitleFromPattern(pattern, name, content);
-  document.getElementById("FireTitleNamePreview").value = preview;
+  var curcontent = op.document.getElementById("content");
+  var curname = document.getElementById("FireTitleOptWinCurName").value;
+  var curpattern = document.getElementById("FireTitleOptWinCurPattern").value;
 
+  var newsamepat = document.getElementById("FireTitleOptWinNewSamePattern").checked;
+  if(newsamepat)
+  {
+    document.getElementById("FireTitleOptWinNewPattern").value = curpattern;
+  }
+  document.getElementById("FireTitleOptWinNewPattern").readonly = newsamepat;
+
+  var curpreview = man.computeTitleFromPattern(curpattern, curname, curcontent, sep);
+  document.getElementById("FireTitlePreWinCur").value = curpreview;
+
+  var newname = document.getElementById("FireTitleOptWinNewName").value;
+  var newpattern = document.getElementById("FireTitleOptWinNewPattern").value;
+
+  var newpreview = man.computeTitleFromPattern(newpattern, newname, curcontent, sep);
+  document.getElementById("FireTitlePreWinNew").value = newpreview;
+//  FireTitleRename_onAccept();
 }
 
 
+// Update preview
+function FireTitleRename_onClick(event)
+{
+  window.setTimeout(
+      function()
+      {
+        FireTitleRename_doPreview(window.ftOpener, window.ftManager);
+      },
+      0);
+}
 // Update preview
 function FireTitleRename_onKeypress(event)
 {
@@ -89,13 +133,17 @@ function FireTitleRename_onKeypress(event)
 // Update window's parameter when clicking on Ok
 function FireTitleRename_onAccept()
 {
-  var name = document.getElementById("FireTitleRenameName").value;
-  var pattern = document.getElementById("FireTitleOptionsRenamePattern").value;
-  var defname = document.getElementById("FireTitleOptionsRenameDefaultName").checked;
-  var defpattern = document.getElementById("FireTitleOptionsRenameDefaultPattern").checked;
-  var globalpattern = document.getElementById("FireTitleOptionsRenameGlobalPattern").checked;
+  var sep = document.getElementById("FireTitleOptMiscSeparator").value;
 
-  this.ftManager.update(name, pattern, defname, defpattern, globalpattern);
+  var curname = document.getElementById("FireTitleOptWinCurName").value;
+  var curpattern = document.getElementById("FireTitleOptWinCurPattern").value;
+
+  var newname = document.getElementById("FireTitleOptWinNewName").value;
+  var newpattern = document.getElementById("FireTitleOptWinNewPattern").value;
+
+  var globalpattern = document.getElementById("FireTitleOptApplyGlobalPattern").checked;
+
+  this.ftManager.update(sep, curname, curpattern, newname, newpattern, globalpattern);
 }
 
 function FireTitleRename_onHelp()
