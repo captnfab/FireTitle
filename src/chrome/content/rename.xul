@@ -35,8 +35,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
   onunload="FireTitleRename_onAccept(event);"
   onload="FireTitleRename_onLoad(event);"
   title="FireTitle Options"
-  buttons="accept,cancel,help"
-  ondialoghelp="FireTitleRename_onHelp(event);"
+  buttons="cancel,disclosure"
+  ondialogdisclosure="FireTitleRename_onHelp(event);"
   maxwidth="600px">
 
   <prefpane helpURI="chrome://firetitle/locale/help.html">
@@ -78,9 +78,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
       <description class="header">&FireTitleDscMiscSeparator;</description>
       <textbox id="FireTitleOptMiscSeparator" onkeypress="FireTitleRename_onKeypress(event)" />
     </groupbox>
+    <!--<help onclick="FireTitleRename_onHelp(event);"/> -->
   </prefpane>
 
-  <button label="Hop" onclick="FireTitleRename_onHelp(event);"/>
 
   <script type="application/x-javascript" src="chrome://firetitle/content/rename.js"/>
 
