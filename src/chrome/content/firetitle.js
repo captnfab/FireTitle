@@ -172,6 +172,31 @@ var FireTitle =
     return content.contentDocument.title;
   },
 
+  // Get active TabGroup's name
+  getActiveGroupName: function()
+  {
+    var groupName = null;
+
+    if(!window.TabView._window)
+    {
+      try
+      {
+        groupName = this.sessionStore.getWindowValue(window, "ftlWinLGrpN");
+      }
+      catch(e)
+      {
+        groupName = "";
+      }
+    }
+    else
+    {
+      groupName = window.TabView._window.GroupItems._activeGroupItem.getTitle();
+      this.sessionStore.setWindowValue(window, "ftlWinLGrpN", groupName);
+    }
+
+    return groupName;
+  },
+
   // Get Modifier from content
   getModifier: function(content)
   {
@@ -231,11 +256,13 @@ var FireTitle =
           // Number of tabs
           match = content."TODO";
           break;
+*/
         case 'g':
           // Group name
-          match = "TODO";
+          match = this.getActiveGroupName();
+          if(!match) continue;
           break;
-*/
+
         case 'm':
           // Modifier
           match = this.getModifier(content);
@@ -280,7 +307,7 @@ var FireTitle =
     return this.computeTitleFromPattern(this.getPattern(), this.getName(), content, this.getDefaultSeparator());
   },
 
-  update: function(sep, name, pattern, defname, defpat, applypat)
+  update: function(sep, name, pattern, defname, defpat)
   {
     this.setDefaultSeparator(sep);
 
@@ -290,10 +317,6 @@ var FireTitle =
     this.setDefaultName(defname);
     this.setDefaultPattern(defpat);
 
-    if (applypat)
-    {
-      this.observerService.notifyObservers(null, "extensions.firetitle.sync-to-pattern", pattern);
-    }
     this.settitle();
   },
 

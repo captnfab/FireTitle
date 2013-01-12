@@ -125,10 +125,17 @@ function FireTitleRename_onKeypress(event)
       function()
       {
         FireTitleRename_doPreview(window.ftOpener, window.ftManager);
+        FireTitleRename_onAccept();
       },
       0);
 }
 
+// Update all opened windows
+function FireTitleRename_onGlobalApply()
+{
+  var curpattern = document.getElementById("FireTitleOptWinCurPattern").value;
+  this.ftManager.observerService.notifyObservers(null, "extensions.firetitle.sync-to-pattern", curpattern);
+}
 
 // Update window's parameter when clicking on Ok
 function FireTitleRename_onAccept()
@@ -141,9 +148,7 @@ function FireTitleRename_onAccept()
   var newname = document.getElementById("FireTitleOptWinNewName").value;
   var newpattern = document.getElementById("FireTitleOptWinNewPattern").value;
 
-  var globalpattern = document.getElementById("FireTitleOptApplyGlobalPattern").checked;
-
-  this.ftManager.update(sep, curname, curpattern, newname, newpattern, globalpattern);
+  this.ftManager.update(sep, curname, curpattern, newname, newpattern);
 }
 
 function FireTitleRename_onHelp()
