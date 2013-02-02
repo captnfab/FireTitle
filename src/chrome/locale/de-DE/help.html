@@ -1,5 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html><head><!--
+<html lang=de><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!--
+Copyright 2013 Fabien Givors (fabien.givors@chezlefab.net), Malte Forkel (malte.forkel@berlin.de)
 Copyright 2011-2012 Fabien Givors (fabien.givors@chezlefab.net)
 Copyright 2008 Jonathan Nowitz (jonathannowitz@gmail.com)
 Copyright 2005 Jonathan Nowitz (jonathannowitz@gmail.com), Vanessa Fox, and
@@ -82,7 +85,7 @@ td.alt {
 
 <h3><a name="Introduction">Einführung</a></h3>
 
-<p><a name="Introduction">Mit FireTitle können sie den Titel eines Firefox Fensters beeinflussen.</p>
+<p>Mit FireTitle können sie den Titel eines Firefox Fensters beeinflussen.</p>
 
 <p>FireTitle bietet Ihnen dazu zwei Möglichkeiten:</p>
 
@@ -91,7 +94,7 @@ td.alt {
 <li>Für den Titel kann ein <a href="#ChangingTitlePattern">Muster</a> vorgegeben werden. </li>
 </ul>  
 
-<p>Die meisten Betriebssysteme und Fenstermanager bieten eine Möglichkeit, Fenster über ihrem Titel auszuwählen (z.B. mit Alt-Tab oder im Infobereich). Haben die Fenster aussagekräftige Namen, fällt die Suche nach einem Fenster viel leichter.</p>
+<p>Die meisten Betriebssysteme und Fenstermanager bieten eine Möglichkeit, Fenster anhand ihres Titels auszuwählen (z.B. mit Alt-Tab oder im Infobereich). Haben die Fenster aussagekräftige Namen, fällt die Suche nach einem Fenster viel leichter.</p>
 
 <p>FireTitle kann für Sie hilfreich sein, ganz unabhängig davon, wie Sie Ihren Browser benutzen. Am meisten werden allerdings vermutlich Benutzer profitieren, die häufig mit vielen Fenstern arbeiten, in denen jeweils mehrere Tabs zu einem gemeinsamen Thema geöffnet sind. Benutzer, die mehrere Profile benutzen, können für jedes Profil eigene Einstellungen vornehmen.</p>
 
@@ -99,13 +102,13 @@ td.alt {
 <h3><a name="AccessingOptions">Optionsdialog öffnen</a></h3>
 
 <p>Es gibt zwei Möglichkeiten, den Optionsdialog zu öffnen.  Mit dem Tastaturkürzel ';'
-(Ctrl-; unter Windows oder Linux, Command-; auf dem Mac).
-Oder Sie klicken auf das FireTitle Icon
+(Ctrl-';' unter Windows und Linux, Command-';' auf dem Mac).
+Oder mit einem Klick auf das FireTitle Icon
 <img src="chrome://firetitle/skin/ft.png"> in der Symbolleiste.
 (Falls das Icon nicht zu sehen ist, können Sie mit einem Rechtsklick in der Symbolleiste und
 <strong>Anpassen...</strong> den Konfigurationsdialog für die Symbolleiste öffnen.
 Ziehen Sie dann das FireTitle Icon auf die Symbolleiste und klicken Sie abschließend auf
-<strong>Fertig</strong>).</p> 
+<strong>Fertig</strong>.)</p> 
 
 <h3><a name="NamingWindows">Namen des aktuellen Fensters setzen</a></h3>
 
@@ -114,25 +117,26 @@ Ziehen Sie dann das FireTitle Icon auf die Symbolleiste und klicken Sie abschlie
 
 <h3><a name="ChangingTitlePattern">Allgemeine Einstellungen vornehmen</a></h3>
 
-<p><strong>Das Titelmuster festlegen</strong></p>
+<h4>Titelmuster festlegen</h4>
 <p>FireTitle ersetzt den normalen Titel eines Firefox Fenster durch einen Text, dessen Muster Sie festgelegt haben. Folgende Musterelemente stehen zur Verfügung:</p>
 
 <table>
 <tr>
-<td><strong>n</strong></td>
-<td>Fenster<strong>n</strong>ame</td>
-<td>Der Name des Browser-Fensters, der wie in <a href="#NamingWindows">Namen des aktuellen Fensters setzen</a> beschrieben festgelegt werden kann.</td>
+<td class="alt"><strong>n</strong></td>
+<td class="alt">Fenster<strong>n</strong>ame</td>
+<td class="alt">Der Name des Browser-Fensters, der wie in <a href="#NamingWindows">Namen des aktuellen Fensters setzen</a> beschrieben festgelegt werden kann.</td>
 </tr>
+
 <tr>
-<td class="alt"><strong>t</strong></td>
-<td class="alt">Seiten<strong>t</strong>itel</td>
-<td class="alt">Der Titel der im Browser angezeigten Seite (im Fenster bzw. aktiven Tab), so wie er von Firefox ermittelt wurde.</td>
+<td><strong>t</strong></td>
+<td>Seiten<strong>t</strong>itel</td>
+<td>Der Titel der im Browser angezeigten Seite (im Fenster bzw. aktiven Tab), so wie er von Firefox ermittelt wurde.</td>
 </tr>
 
 <tr>
 <td class="alt"><strong>g</strong></td>
-<td class="alt">document <strong>t</strong>itle</td>
-<td class="alt">The title of the active tab group, as determined by Firefox (might work only after being changed once).</td>
+<td class="alt">Tabulator<strong>g</strong>ruppe</td>
+<td class="alt">Der Titel der aktuellen Tabulatorgruppe (funktioniert eventuell nur nach einmaliger Änderung).</td>
 </tr>
 
 <tr>
@@ -167,25 +171,28 @@ Ziehen Sie dann das FireTitle Icon auf die Symbolleiste und klicken Sie abschlie
 
 <table>
 <tr>
-<td><strong>Zahl</strong></td>
-<td>maximale Länge</td>
-<td>Die Länge des Elements wird auf 
+<td class="alt"><strong>Zahl</strong></td>
+<td class="alt">maximale Länge</td>
+<td class="alt">Die Länge des Elements wird auf 
 <em>Zahl</em> Zeichen begrenzt.  Zum Beispiel wird <strong>t10</strong> höchstens die ersten 10 Zeichen des Seitentitels anzeigen.  Dieser Modifikator ist für einige Elemente (z.B. Titel) eindeutig nützlicher als für andere (z.B. festen Text), steht aber für alle zur Verfügung.</td>
 </tr>
 <tr>
-<td class="alt"><strong>!</strong></td>
-<td class="alt">immer darstellen</td>
-<td class="alt">Manche Element resultieren manchmal in keinerlei Text. Zum Beispiel:
+<td><strong>!</strong></td>
+<td>immer darstellen</td>
+<td>
+Manche Element resultieren manchmal in keinerlei Text. Zum Beispiel:
 <ul>
 <li>Das Element <strong>a</strong> erzeugt keinen Text, bis das Fenster mindestens eine Minute alt ist.
 Mit <strong>a!</strong> wird dann <strong>0 Minuten</strong> dargestellt.</li>
-<br>
-
-Aus Sicht von Firefox haben manche Seiten keinen Titel. 
+</ul>
+Aus Sicht von Firefox haben manche Seiten keinen Titel.
+<ul>
 <li><strong>t</strong> liefert dann keinen Text, aber <strong>t!</strong> führt zur Anzeige von <strong>(Ohne Titel)</strong>.</li> <li><strong>n!</strong> führt dann zur Anzeige
  <strong>KEIN NAME</strong> </li>
 <li><strong>m!</strong> führt dann zur Anzeige <strong>KEIN MODIFIKATOR</strong>.</li>
-</ul>  Falls Sie es beunruhigend finden, dass dem Fenstertitel manchmal ein ganzer Block fehlt, benutzen Sie diesen Modifikator.</td>
+</ul>
+Falls Sie es beunruhigend finden, dass dem Fenstertitel manchmal ein ganzer Block fehlt, benutzen Sie diesen Modifikator.</td>
+
 </tr>
 </table>
 
@@ -196,7 +203,8 @@ Aus Sicht von Firefox haben manche Seiten keinen Titel.
 
 <p>Wenn Sie im Optionsdialog das Titelmuster ändern und <strong>OK</strong> klicken, werden alle offenen Fenster aktualisiert.</p> 
 
-<p><strong>Den Standardnamen für ein neues Fenster setzen</strong></p>
+<h4>Standardnamen für ein neues Fenster setzen</h4>
+
 <p>Beim Namen eines neuen Fenster können Sie zwischen drei Möglichkeiten wählen:</p>
 <ul>
 <li><strong>Kein Name</strong> - Neue Fenster benutzten lediglich das Titelmuster</li>
@@ -207,7 +215,7 @@ Aus Sicht von Firefox haben manche Seiten keinen Titel.
 
 <p>Schon während Sie das Titelmuster im Optionsdialog eingeben, zeigt Ihnen die Titelvorschau, wie der Titel Ihres Fensters mit diesem Muster aussehen würde. Unzulässige Eingaben werden dabei so weit als möglich ignoriert (aber im Fehlerbereich angezeigt).</p>
 
-<h4><a name="Copyright">Copyright und Lizenz</a></h4>
+<h3><a name="Copyright">Copyright und Lizenz</a></h3>
 <div class="copy">
 
 <p>
