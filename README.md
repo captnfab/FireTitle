@@ -11,7 +11,7 @@ It allows the user to name its browser's windows easily.
 
   ```sh
   cd /tmp
-  wget https://github.com/captnfab/FireTitle/archive/master.zip
+  wget "https://github.com/captnfab/FireTitle/archive/master.zip"
   unzip master.zip
   cd FireTitle-master
   rm -f /tmp/FireTitle-nightly.xpi
