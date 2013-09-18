@@ -26,6 +26,10 @@
 
 var FireTitle =
 {
+  // Check Firefox version
+  versionChecker: null,
+  // Get Firefox infos
+  appInfo: null,
   // Handle plugin configuration
   prefs: null,
   // Handle per-window prefs
@@ -35,14 +39,25 @@ var FireTitle =
 
   startup: function()
   {
+    this.appInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+      .getService(Components.interfaces.nsIXULAppInfo);
+    this.versionChecker = Components.classes["@mozilla.org/xpcom/version-comparator;1"]
+      .getService(Components.interfaces.nsIVersionComparator);
+
     this.prefs = Components.classes["@mozilla.org/preferences-service;1"]
       .getService(Components.interfaces.nsIPrefService)
       .getBranch("extensions.firetitle.");
     this.prefs.QueryInterface(Components.interfaces.nsIPrefBranch);
-    this.prefs.addObserver("", this, false);
+    if(this.versionChecker.compare(this.appInfo.version, "13.0") >= 0)
+      this.prefs.addObserver("", this, false);
 
     this.sessionStore = Components.classes["@mozilla.org/browser/sessionstore;1"]
       .getService(Components.interfaces.nsISessionStore);
+    if (!this.sessionStore)
+    {
+      alert("null session object, FireTitle won't work.");
+      return;
+    }
 
     this.observerService = Components.classes["@mozilla.org/observer-service;1"]
       .getService(Components.interfaces.nsIObserverService);
@@ -65,10 +80,6 @@ var FireTitle =
   settitle: function()
   {
     document.getElementById("content").updateTitlebar();
-  },
-  settitle2: function()
-  {
-    alert("hop");
   },
 
   // Set default Name to preferences
