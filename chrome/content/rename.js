@@ -125,7 +125,7 @@ function FireTitleRename_onKeypress(event)
       function()
       {
         FireTitleRename_doPreview(window.ftOpener, window.ftManager);
-        FireTitleRename_onAccept();
+//        FireTitleRename_onAccept();
       },
       0);
 }
