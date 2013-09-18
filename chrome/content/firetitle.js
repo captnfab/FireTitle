@@ -73,7 +73,8 @@ var FireTitle =
   },
   shutdown: function()
   {
-    this.prefs.removeObserver("", this);
+    if(this.versionChecker.compare(this.appInfo.version, "13.0") >= 0)
+      this.prefs.removeObserver("", this);
     this.observerService.removeObserver(this, "extensions.firetitle.sync-to-pattern");
   },
 
