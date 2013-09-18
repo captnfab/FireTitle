@@ -1,16 +1,16 @@
-<!ENTITY FireTitleGrpWinCurNaming           "Ventana Actual">
-<!ENTITY FireTitleDscWinCurName             "Window Name">
-<!ENTITY FireTitleDscWinCurPattern          "Title Pattern">
-<!ENTITY FireTitleDscWinCurPre              "Preview">
+<!ENTITY FireTitleGrpWinCurNaming           "Ventana actual">
+<!ENTITY FireTitleDscWinCurName             "Nombre de la ventana">
+<!ENTITY FireTitleDscWinCurPattern          "Patrón del título">
+<!ENTITY FireTitleDscWinCurPre              "Vista preliminar">
 
-<!ENTITY FireTitleGrpWinExiNaming           "Already existing windows">
-<!ENTITY FireTitleDscApplyGlobalPattern     "Apply this pattern to already opened windows">
+<!ENTITY FireTitleGrpWinExiNaming           "Ventanas existentes">
+<!ENTITY FireTitleDscApplyGlobalPattern     "Aplicar este patrón para todas las ventanas abiertas">
 
-<!ENTITY FireTitleGrpWinNewNaming           "New Windows">
-<!ENTITY FireTitleDscWinNewName             "Default Name">
-<!ENTITY FireTitleDscWinNewPattern          "Default Title Pattern">
-<!ENTITY FireTitleDscWinNewSamePattern      "Use current window title pattern">
-<!ENTITY FireTitleDscWinNewPre              "Preview">
+<!ENTITY FireTitleGrpWinNewNaming           "Nueva ventanas">
+<!ENTITY FireTitleDscWinNewName             "Nombre por defecto">
+<!ENTITY FireTitleDscWinNewPattern          "Patrón por defecto">
+<!ENTITY FireTitleDscWinNewSamePattern      "Usar el patrón de la ventana actual">
+<!ENTITY FireTitleDscWinNewPre              "Vista preliminar">
 
-<!ENTITY FireTitleGrpMisc                   "Options">
-<!ENTITY FireTitleDscMiscSeparator          "Separator">
+<!ENTITY FireTitleGrpMisc                   "Otros">
+<!ENTITY FireTitleDscMiscSeparator          "Separador">
