@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!--
-Copyright 2011-2012 Fabien Givors (fabien.givors@chezlefab.net)
+Copyright 2011-2013 Fabien Givors (fabien.givors@chezlefab.net)
 Copyright 2008 Jonathan Nowitz (jonathannowitz@gmail.com)
 Copyright 2005 Jonathan Nowitz (jonathannowitz@gmail.com) and Google, Inc.
 
@@ -26,11 +26,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
   xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
   <Description about="urn:mozilla:install-manifest">
-
     <em:id>{f4b962b4-ab75-41bf-8da7-a0435258a27c}</em:id>
     <em:version>0.5.5-1</em:version>
     <em:type>2</em:type>
 
+    <!-- Firefox -->
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
@@ -42,9 +42,33 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
     <em:name>FireTitle</em:name>
     <em:description>Label your Firefox browser windows with mnemonic titles</em:description>
     <em:creator>Jonathan Nowitz</em:creator>
+    <em:developer>Fabien Givors (captnfab)</em:developer>
     <em:homepageURL>https://addons.mozilla.org/firefox/addon/firetitle/</em:homepageURL>
-    <em:developer>Fabien Givors</em:developer>
+    <em:translator>Malte (de)</em:translator>
+    <em:translator>Solange and MaTTuX_</em:translator>
 
     <em:optionsURL>chrome://firetitle/content/rename.xul</em:optionsURL>
+
+    <em:localized>
+      <Description>
+        <em:locale>fr</em:locale>
+        <em:name>FireTitle</em:name>
+        <em:description>Permet de personnaliser le titre des fenêtres pour Firefox.</em:description>
+        <em:creator>Jonathan Nowitz</em:creator>
+        <em:developer>Fabien Givors (captnfab)</em:developer>
+        <em:translator>Fabien Givors (captnfab)</em:translator>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>es</em:locale>
+        <em:name>FireTitle</em:name>
+        <em:description>Permite personalizar el título de las ventanas de Firefox.</em:description>
+        <em:creator>Jonathan Nowitz</em:creator>
+        <em:developer>Fabien Givors (captnfab)</em:developer>
+        <em:translator>Solange y MaTTuX_</em:translator>
+      </Description>
+    </em:localized>
   </Description>
 </RDF>
