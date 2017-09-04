@@ -1,0 +1,48 @@
+{
+  "manifest_version": 2,
+  "name": "Crappy Firetitle",
+  "version": "0.1.2",
+  "default_locale": "en",
+  "description": "__MSG_extensionDescription__",
+  "icons": {
+    "16": "icons/ft.png",
+    "48": "icons/crappy-48.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "crappyfiretitle@chezlefab.net"
+    }
+  },
+  "permissions": [ "storage", "tabs" ],
+
+  "background": {
+    "scripts": [ "lib/lib.js", "background.js" ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "match_about_blank": true,
+      "js": [ "content-script.js" ]
+    }
+  ],
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": true
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/ft.png",
+      "48": "icons/crappy-48.png"
+    },
+    "default_title": "FireTitle"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Comma"
+      },
+      "description": "Go to FireTitle options page"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+
+  <body>
+    <p id="APIWarning" class="warning">
+    Due to Webextension limited API, the page title and the browser's name
+    cannot be hidden from the titlebar. If you want this behavior to change,
+    please support <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1396010">
+    this feature request</a>.
+    </p>
+    <form>
+    <fieldset class="clear-options">
+      <legend class="title" id="OG_currentWindow">Fenêtre courante</legend>
+      <div>
+        <label id="O_cur_win_name" for="cur_win_name">Nom de la fenêtre</label>
+        <input type="text" id="cur_win_name" />
+      </div>
+      <div>
+        <label id="O_cur_win_pattern" for="cur_win_pattern">Motif du titre</label>
+        <input type="text" id="cur_win_pattern" />
+      </div>
+      <div class="disabled">
+        <label id="O_cur_preview">Aperçu</label>
+        <input type="text" disabled="disabled" id="cur_win_preview" />
+      </div>
+    </fieldset>
+    <fieldset class="clear-options">
+      <legend class="title" id="OG_defaultWindows">Fenêtres par défaut</legend>
+      <div>
+        <label id="O_def_win_name" for="def_win_name">Nom de la fenêtre</label>
+        <input type="text" id="def_win_name" />
+      </div>
+      <div>
+        <label id="O_def_win_pattern" for="def_win_pattern">Motif du titre</label>
+        <input type="text" id="def_win_pattern" />
+      </div>
+      <div>
+        <label id="O_useCurrentPattern" for="cur_win_pattern_as_def">Utiliser le motif de la fenêtre courante</label>
+        <input type="checkbox" id="cur_win_pattern_as_def" />
+      </div>
+      <div class="disabled">
+        <label id="O_def_preview" for="def_win_preview">Aperçu</label>
+        <input type="text" disabled="disabled" id="def_win_preview" />
+      </div>
+    </fieldset>
+    <fieldset class="clear-options">
+      <legend class="title" id="OG_existingWindows">Fenêtres existantes</legend>
+      <input type="button" value="Appliquer le motif ci-dessus aux anciennes fenêtres" id="apply-to-older" />
+    </fieldset>
+    <fieldset class="clear-options">
+      <legend class="title" id="OG_separator">Séparateur</legend>
+      <div>
+        <label id="O_separator" for="separator">Séparateur</label>
+        <input type="text" id="separator" />
+      </div>
+    </fieldset>
+
+    <input type="submit" value="Enregistrer les modifications" id="save-button" />
+    <!--<input type="button" value="Test" id="test-button" /> -->
+    <a href="#" id="more-info" target="_blank">Plus d'infos</a>
+    </form>
+    <script src="../lib/lib.js"></script>
+    <script src="../content-script.js"></script>
+    <script src="options.js"></script>
+    <script src="locales.js"></script>
+  </body>
+
+</html>

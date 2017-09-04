@@ -1,0 +1,64 @@
+{
+  "extensionDescription": {
+    "message": "A beta webextension version of FireTitle which isn't fully functionnal.",
+    "description": "Description of the extension"
+  },
+
+  "OG_currentWindow": {
+    "message": "Current window",
+    "description": "Option group name for current window's settings"
+  },
+
+  "OG_existingWindows": {
+    "message": "Existing windows",
+    "description": "Option group name for existing window's settings"
+  },
+
+  "OG_defaultWindows": {
+    "message": "Default windows",
+    "description": "Option group name for default window's settings"
+  },
+
+  "OG_separator": {
+    "message": "Separator",
+    "description": "Option group name for separator settings"
+  },
+
+  "O_windowName": {
+    "message": "Window's name",
+    "description": "Label of the window's name input"
+  },
+  "O_titlePattern": {
+    "message": "Title pattern",
+    "description": "Label of the title's pattern input"
+  },
+  "O_preview": {
+    "message": "Preview",
+    "description": "Label of the preview for window's titles"
+  },
+  "O_useCurrentPattern": {
+    "message": "Use current window's pattern",
+    "description": "Label for checkbox to use current window's pattern as default pattern"
+  },
+
+  "O_separator": {
+    "message": "Separator",
+    "description": "Option name for separator settings"
+  },
+  "B_saveChanges": {
+    "message": "Save changes",
+    "description": "Button label for saving the changes made in the settings"
+  },
+  "B_applyPatternToExisting": {
+    "message": "Apply default pattern to opened windows",
+    "description": "Button label for applying default pattern to existing windows"
+  },
+  "B_moreinfo": {
+    "message": "More info",
+    "description": "Link label for help and more info page"
+  },
+  "W_APIWarning": {
+    "message": "Due to Webextension limited API, the page title and the browser's name cannot be hidden from the titlebar. If you want this behavior to change, please support <a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1396010\"> this feature request</a>.",
+    "description": "Warning about limited API"
+  }
+}

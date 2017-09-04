@@ -1,0 +1,12 @@
+Add option to
+  - reset all seting
+  - delete setting of deleted pages
+  - automatically delete settings when a page is closed
+  - automatically gives some names
+  - automatically create windows
+
+Add pattern for
+  - number of tabs
+  - id (pos) of active tab
+  - tab group
+  - tab container ?
