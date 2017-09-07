@@ -8,9 +8,9 @@
 
   <body>
     <p id="APIWarning" class="warning">
-    Due to Webextension limited API, the page title and the browser's name
+    <span>Due to Webextension limited API, the page title and the browser's name
     cannot be hidden from the titlebar. If you want this behavior to change,
-    please support <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1396010">
+    please support</span> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1396010">
     this feature request</a>.
     </p>
     <form>
@@ -64,6 +64,7 @@
     <!--<input type="button" value="Test" id="test-button" /> -->
     <a href="#" id="more-info" target="_blank">Plus d'infos</a>
     </form>
+    <script src="default.js"></script>
     <script src="../lib/lib.js"></script>
     <script src="../content-script.js"></script>
     <script src="options.js"></script>

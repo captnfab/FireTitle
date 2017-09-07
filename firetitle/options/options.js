@@ -18,7 +18,7 @@ function updateAllTitles()
 /* Save options to storage and updateAllTitles */
 function saveOptions()
 {
-  document.querySelector("form").preventDefault();
+  //document.querySelector("form").preventDefault();
   var prop_set =
     {
       def_win_name: document.querySelector("#def_win_name").value,
@@ -33,7 +33,7 @@ function saveOptions()
 /* Set default pattern to all windows, save it, update options and updateAllTitles */
 function applyDefaultToAll()
 {
-  document.querySelector("form").preventDefault();
+  //document.querySelector("form").preventDefault();
   function reallyApply(wins)
   {
     var prop_set =
@@ -66,8 +66,8 @@ function do_previews()
     var separator = document.querySelector("#separator");
     var cur_win_name = document.querySelector("#cur_win_name");
     var cur_win_pattern = document.querySelector("#cur_win_pattern");
-    var preview_cur = computeTitle(cur_win_pattern.value, separator.value, cur_win_name.value, "Hello world!", info);
-    var preview_def = computeTitle(def_win_pattern.value, separator.value, def_win_name.value, "Hello world!", info);
+    var preview_cur = computeTitle(cur_win_pattern.value, separator.value, cur_win_name.value, "Hello world!", "nbtab", info);
+    var preview_def = computeTitle(def_win_pattern.value, separator.value, def_win_name.value, "Hello world!", "nbtab", info);
     document.querySelector("#cur_win_preview").value=preview_cur;
     document.querySelector("#def_win_preview").value=preview_def;
     document.querySelector("#cur_win_preview").title=preview_cur;
@@ -105,9 +105,9 @@ function restoreOptions()
 {
   function fillForm(result)
   {
-    document.querySelector("#def_win_name").value = result.def_win_name || "Blah_name";
-    document.querySelector("#def_win_pattern").value = result.def_win_pattern || "ntm";
-    document.querySelector("#separator").value = result.separator || " - ";
+    document.querySelector("#def_win_name").value = result.def_win_name || default_options["win_name"];
+    document.querySelector("#def_win_pattern").value = result.def_win_pattern || default_options["win_patt"];
+    document.querySelector("#separator").value = result.separator || default_options["sep"];
     document.querySelector("#cur_win_name").value = result["win"+win.id+"_name"] || document.querySelector("#def_win_name").value;
     document.querySelector("#cur_win_pattern").value = result["win"+win.id+"_pattern"] || document.querySelector("#def_win_pattern").value;
     updateForm();

@@ -1,4 +1,5 @@
-document.querySelector("#APIWarning").innerHTML = browser.i18n.getMessage("W_APIWarning");
+document.querySelector("#APIWarning span").innerText = browser.i18n.getMessage("W_APIWarning");
+document.querySelector("#APIWarning a").innerText = browser.i18n.getMessage("W_APIWarningURL");
 
 document.querySelector("#OG_currentWindow").innerText = browser.i18n.getMessage("OG_currentWindow");
 document.querySelector("#O_cur_win_name").innerText = browser.i18n.getMessage("O_windowName");

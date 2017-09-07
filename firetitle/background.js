@@ -1,27 +1,28 @@
-browser.browserAction.onClicked.addListener(() => {browser.runtime.openOptionsPage().then(console.log)});
+browser.browserAction.onClicked.addListener(() => browser.runtime.openOptionsPage());
 
 function applyOptions(tab_id)
 {
-  function setWindowName(result, tab, browserInfo)
+  function setWindowName(result, tab, browserInfo, nbtab)
   {
-    separator = result.separator || " - ";
-    cur_win_name = result["win"+tab.windowId+"_name"] || result.def_win_name || "Blah_name";
-    cur_win_pattern = result["win"+tab.windowId+"_pattern"] || result.def_win_pattern || "nt";
-    newtitle = computeTitle(cur_win_pattern, separator, cur_win_name, tab.title, browserInfo);
+    separator = result.separator || default_options["sep"];
+    cur_win_name = result["win"+tab.windowId+"_name"] || result.def_win_name || default_options["win_name"];
+    cur_win_pattern = result["win"+tab.windowId+"_pattern"] || result.def_win_pattern || default_options["win_patt"];
+    newtitle = computeTitle(cur_win_pattern, separator, cur_win_name, tab.title, nbtab, browserInfo);
     // XXX: Workarround for Webextension poor API
     newtitle += separator;
     var win_prop = {
       titlePreface: newtitle
     };
-    // console.log("Computed title(p="+cur_win_pattern+", s="+separator+", n="+cur_win_name+", t="+tab.title+") = " + newtitle + " (Wid=" + tab.windowId + ")");
+    debugInfo(0, "Computed title(p="+cur_win_pattern+", s="+separator+", n="+cur_win_name+", t="+tab.title+") = " + newtitle + " (Wid=" + tab.windowId + ")");
     browser.windows.update(tab.windowId, win_prop);
   }
 
   browser.storage.local.get().then(
     (result) => {browser.tabs.get(tab_id).then(
       (tab) => {browser.runtime.getBrowserInfo().then(
-        (info) => {setWindowName(result, tab, info) }
-      )})}).catch(onError);
+        (info) => {browser.tabs.query({windowId: tab.windowId}).then(
+          (tabs) => {setWindowName(result, tab, info, tabs.length) }
+        )})})}).catch(onError);
 }
 
 function readMsg(msg, sender)

@@ -1,7 +1,7 @@
-function computeTitle(pattern, separator, name, origTitle, browserInfo)
+function computeTitle(pattern, separator, name, origTitle, nbtab, browserInfo)
 {
   var title = "";
-
+  var nosepid = [];
 
   for (var i = 0; i < pattern.length; i++)
   {
@@ -20,7 +20,7 @@ function computeTitle(pattern, separator, name, origTitle, browserInfo)
         // Browser's Version
         match = browserInfo.version;
         break;
-      case 'V':
+      case 'b':
         // Browser's build ID
         match = browserInfo.buildID;
         break;
@@ -32,20 +32,20 @@ function computeTitle(pattern, separator, name, origTitle, browserInfo)
         // Title
         match = origTitle;
         break;
-        /*
-        case 'T':
+      case 'T':
         // Number of tabs
-          match = content."TODO";
+          match = nbtab;
           break;
-         */
-        case 'g':
+        /*
+      case 'g':
         // Group name
         match = this.getActiveGroupName();
         if(!match) continue;
         break;
+        */
 
-        // Text inside [ ] is copied. ] is escaped with ]]
       case '[':
+        // Text inside [ ] is copied. ] is escaped with ]]
         var i0 = ++i;
         var i1 = 0;
         while(i < pattern.length && !i1)
@@ -61,6 +61,7 @@ function computeTitle(pattern, separator, name, origTitle, browserInfo)
         }
         if(!i1) i1 = i -1;
         match = pattern.substr(i0, (i1-i0+1))
+        nosepid.push(i+1);
         break;
       default:
         match = "";
@@ -74,11 +75,42 @@ function computeTitle(pattern, separator, name, origTitle, browserInfo)
     {
       match = match.substr(0, limiter);
     }
-    title = match ? (title ? title + separator + match : match) : title;
+    title = match ? (title ? title + (nosepid.indexOf(i)>=0?"":separator) + match : match) : title;
   }
   return title;
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  debugInfo(2, error);
+}
+
+function debugInfo(level, info)
+{
+  // false: debugging disabled for releases
+  // (might be configurable in the options if users ask for it)
+  var debug=false;
+  // Minimum verbosity level
+  // 0: info, 1: warning, 2: failure, 3: debug only
+  var debuglevel=2;
+
+  if(debug && level>= debuglevel)
+  {
+    var output = "";
+    switch(level)
+    {
+      case 0:
+        output = "[Info] " + error;
+        break;
+      case 1:
+        output = "[Warn] " + error;
+        break;
+      case 2:
+        output = "[Fail] " + error;
+        break;
+      default:
+        output = "[Debug] " + error;
+        break;
+    }
+    console.log(output);
+  }
 }

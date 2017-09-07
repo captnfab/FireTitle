@@ -1,0 +1,35 @@
+body, td, th {
+  font-family: arial, sans-serif;
+  font-size: 83%;
+}
+
+pre, code, tt {
+  font-size: 83%;
+}
+
+
+table {
+  margin-left:3%;
+  border: 1px solid #c3d9ff;
+  border-spacing:0;
+}
+
+td {
+  border-right: 1px solid #C3d9ff;
+  border-bottom: 1px solid #C3d9ff;
+  background: #fff;
+  font-family:arial,sans-serif; 
+  text-align:left;
+  margin-left:3%;	
+  padding: 6px 6px 6px 12px;
+  vertical-align:top;
+}
+
+td.alt {
+  background: #e8eefa;
+  vertical-align:top;
+}
+
+.copy {
+  font-size:x-small;
+}

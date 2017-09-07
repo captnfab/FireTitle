@@ -10,13 +10,14 @@
   },
   "applications": {
     "gecko": {
-      "id": "crappyfiretitle@chezlefab.net"
+      "id": "crappyfiretitle@chezlefab.net",
+      "strict_min_version": "56.0"
     }
   },
   "permissions": [ "storage", "tabs" ],
 
   "background": {
-    "scripts": [ "lib/lib.js", "background.js" ]
+    "scripts": [ "lib/lib.js", "options/default.js", "background.js" ]
   },
 
   "content_scripts": [
