@@ -1,19 +1,23 @@
 FireTitle
 =========
 
-FireTitle is an extension for Firefox browser.
+An extension for **enhanced presentation of titles** in tabs and title bars of Firefox. 
 
-It allows the user to name its browser's windows easily.
+The original _FireTitle_:
 
-A WebExtension version is currently being developped, the old XUL version is
-still the last stable version for now but isn't developped anymore.
+- uses a legacy technology (XUL)
+- is stable, but no longer developed
+- may be effectively passed through the [Extension Converter for SeaMonkey](http://addonconverter.fotokraina.com/)
+- will not work with Firefox 57.
 
-## Downloads
+The new _Crappy Firetitle_: 
 
-* [Last stable release](https://addons.mozilla.org/firefox/downloads/latest/1298/)
-* [Last testing webextension release](https://addons.mozilla.org/firefox/downloads/latest/715281/)
+- is for Firefox 56 and later
+- is constrained by [WebExtensions APIs](https://wiki.mozilla.org/WebExtensions).
 
 ## Links
 
-* [FireTitle](https://addons.mozilla.org/firefox/addon/firetitle/) on Mozilla’s Firefox Add-ons platform.
-* [FireTitle](https://addons.mozilla.org/firefox/addon/crappy-firetitle/) on Mozilla’s Firefox Add-ons platform.
+Mozilla's _Add-ons for Firefox_: 
+
+* [FireTitle](https://addons.mozilla.org/addon/firetitle/) ([download](https://addons.mozilla.org/downloads/latest/1298/))
+* [Crappy Firetitle](https://addons.mozilla.org/addon/crappy-firetitle/) ([download](https://addons.mozilla.org/downloads/latest/850618/)) 
