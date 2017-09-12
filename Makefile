@@ -1,6 +1,9 @@
-.PHONY: all
+.PHONY: all firetitle-crappy.zip firetitle-xul.xpi
 
-all: crappy.zip
+all: firetitle-crappy.zip firetitle-xul.xpi
 
-crappy.zip:
-	cd firetitle/;zip -r --exclude '*.swp' -FS ../firetitle.zip *
+firetitle-crappy.zip:
+	cd firetitle/;zip -r --exclude '*.swp' -FS ../firetitle-crappy.zip *
+firetitle-xul.xpi:
+	cd old-xul/; zip -r --exclude '*.swp' -FS ../firetitle-xul.zip *
+	mv firetitle-xul.zip firetitle-xul.xpi
