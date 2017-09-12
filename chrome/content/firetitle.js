@@ -65,11 +65,12 @@ var FireTitle =
 
     document.getElementById("content").updateTitlebar =
       function()
-      {
+    {
         document.title = window.FireTitle.computeTitle(document.getElementById("content"));
-      };
-
+    };
     document.getElementById("content").addEventListener("DOMTitleChanged", () => { window.FireTitle.settitle() });
+
+    this.showReleaseNotes();
   },
   shutdown: function()
   {
@@ -351,6 +352,28 @@ var FireTitle =
     window.openDialog("chrome://firetitle/content/rename.xul",
         "FireTitleRename",
         "modal,centerscreen,chrome,resizable=no");
+  },
+
+  showReleaseNotes: function()
+  {
+    var wins = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator).getEnumerator("navigator:browser");
+    var firstWin = wins.getNext();
+
+    if(window != firstWin)
+      return;
+
+    var prefs = this.prefs;
+    Components.utils.import("resource://gre/modules/AddonManager.jsm");
+    AddonManager.getAddonByID("{f4b962b4-ab75-41bf-8da7-a0435258a27c}",
+      function(addon) {
+        var lastver = prefs.getCharPref("extensions.firetitle.lastversion", "-1");
+        var newver = addon.version;
+        if(lastver != newver)
+        {
+          window.setTimeout(()=>{window.gBrowser.selectedTab = window.gBrowser.addTab('https://github.com/captnfab/FireTitle/blob/master/Firetitle_EOL.md')},1000);
+          prefs.setCharPref("extensions.firetitle.lastversion", newver);
+        }
+      });
   },
 }
 
