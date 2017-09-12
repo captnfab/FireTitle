@@ -69,7 +69,7 @@ var FireTitle =
         document.title = window.FireTitle.computeTitle(document.getElementById("content"));
       };
 
-    document.getElementById("content").addEventListener("DOMTitleChanged", window.FireTitle.settitle(), false);
+    document.getElementById("content").addEventListener("DOMTitleChanged", () => { window.FireTitle.settitle() });
   },
   shutdown: function()
   {
