@@ -162,8 +162,8 @@ function fillFormWithCurWinSessionOptions()
 
   let pFillCurWin = pSessionWin.then(([name,pattern]) =>
     {
-      document.querySelector("#cur_win_name").value = name || document.querySelector("#def_win_name").value;
-      document.querySelector("#cur_win_pattern").value = pattern || document.querySelector("#def_win_pattern").value;
+      document.querySelector("#cur_win_name").value = name ;
+      document.querySelector("#cur_win_pattern").value = pattern;
     });
 
   return pFillCurWin;
