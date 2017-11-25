@@ -160,10 +160,10 @@ function fillFormWithCurWinSessionOptions()
   let pLocalStor = browser.storage.local.get();
   let pSessionWin = pWin.then((win) => loadWindowOptionsFromSession(win.id));
 
-  let pFillCurWin = pSessionWin.then(([name,pattern]) =>
+  let pFillCurWin = Promise.all([pSessionWin,pLocalStor]).then(([[name,pattern],localStor]) =>
     {
-      document.querySelector("#cur_win_name").value = name ;
-      document.querySelector("#cur_win_pattern").value = pattern;
+      document.querySelector("#cur_win_name").value = name  !== undefined ? name : (localStor.def_win_name !== undefined ? localStor.def_win_name : default_options["win_name"]);
+      document.querySelector("#cur_win_pattern").value = pattern !== undefined ?  pattern : (localStor.def_win_pattern !== undefined ? localStor.def_win_pattern : default_options["win_patt"]);
     });
 
   return pFillCurWin;
