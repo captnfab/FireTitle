@@ -1,0 +1,53 @@
+fieldset {
+  padding: 0.5em 0.5em;
+  margin: 0.5em 0;
+  max-width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+fieldset input,
+fieldset select {
+  float: right;
+  height: 100%;
+}
+
+input[type="button"] {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+fieldset > div {
+  height: 1.5em;
+  width: 100%;
+  margin: 0em;
+  clear: both;
+}
+
+fieldset label {
+  float: left;
+  margin: 0.5em 0;
+  height: 100%;
+}
+
+fieldset > div:hover:not(.disabled) {
+}
+
+fieldset:hover {
+  border-style: solid;
+}
+
+fieldset input[type="text"] {
+  font-family: monospace;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.warning {
+  border: 3px double red;
+  padding: 1em;
+  font-weight: bold;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+
+  <body>
+    <form>
+    <fieldset class="clear-options">
+      <legend class="title" id="OG_currentWindow">Fenêtre courante</legend>
+      <div>
+        <label id="O_cur_win_name" for="cur_win_name">Nom de la fenêtre</label>
+        <input type="text" id="cur_win_name" autocomplete="off" />
+      </div>
+      <div>
+        <label id="O_cur_win_pattern" for="cur_win_pattern">Motif du titre</label>
+        <input type="text" id="cur_win_pattern" autocomplete="off" />
+      </div>
+    </fieldset>
+
+    <fieldset class="clear-options">
+      <legend class="title" id="OG_defaultWindows">Fenêtres par défaut</legend>
+      <input type="button" value="Définir le motif actuel comme motif par défaut" id="set-pattern-as-default" />
+    </fieldset>
+
+    <fieldset class="clear-options">
+      <legend class="title" id="OG_existingWindows">Fenêtres existantes</legend>
+      <input type="button" value="Appliquer le motif actuel aux autres fenêtres" id="apply-pattern-to-others" />
+    </fieldset>
+
+    </form>
+    <script src="../lib/lib.js"></script>
+    <script src="../content-script.js"></script>
+
+    <script src="default.js"></script>
+    <script src="common.js"></script>
+    <script src="popup.js"></script>
+    <script src="locales-popup.js"></script>
+  </body>
+
+</html>

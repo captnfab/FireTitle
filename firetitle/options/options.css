@@ -1,58 +1,6 @@
 body {
-  width: 46em;
-  font-weight: 300;
+  max-width: 50em;
 }
-
-fieldset {
-  padding: 0.5em 0.5em;
-  margin: 1em 0;
-  max-width: 100%;
-  min-width: 100%;
-}
-
-fieldset input,
-fieldset select {
-  float: right;
-  height: 3em;
-}
-
-#OG_existingWindows ~ input[type="button"] {
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-fieldset > div {
-  height: 3.5em;
-  clear: both;
-}
-
-fieldset label {
-  float: left;
-  margin: 1em 0;
-}
-
-fieldset > div:hover:not(.disabled) {
-  background-color: #EAEFF2;
-  font-weight: bold;
-}
-
-fieldset:hover {
-  border-color: black;
-}
-
 fieldset input[type="text"] {
-  font-family: monospace;
   width: 35em;
-}
-
-legend {
-  color: black;
-  font-weight: bold;
-}
-
-.warning {
-  border: 3px double red;
-  padding: 1em;
-  font-weight: bold;
 }

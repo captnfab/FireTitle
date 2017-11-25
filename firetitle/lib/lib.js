@@ -1,3 +1,50 @@
+/* refreshWinTitleOfTab
+ * Takes a tab Id
+ * Compute and set the title of the tab's window according to defined names and patterns
+ * Returns nothing
+ */
+function refreshWinTitleOfTab(tab_id)
+{
+  let pLocalStor         = browser.storage.local.get();
+  let pBrowserInfo       = browser.runtime.getBrowserInfo();
+  let pCurrentTab        = browser.tabs.get(tab_id);
+  let pCurrentWin        = pCurrentTab.then((tab) => browser.windows.get(tab.windowId));
+  let pCurrentWinTabs    = pCurrentWin.then((win) => browser.tabs.query({windowId: win.id}));
+  let pCurrentWinName    = pCurrentTab.then((tab) => browser.sessions.getWindowValue(tab.windowId, "win_name"));
+  let pCurrentWinPattern = pCurrentTab.then((tab) => browser.sessions.getWindowValue(tab.windowId, "win_patt"));
+
+  Promise.all([pLocalStor, pBrowserInfo, pCurrentTab, pCurrentWin, pCurrentWinTabs, pCurrentWinName, pCurrentWinPattern])
+    .then((args) => setTitleOfWinofTab(...args));
+}
+
+/* saveWindowOptionsToSession
+ * Takes window Id, Name and Pattern
+ * Saves to session
+ * Returns a promise that options are saved
+ */
+function saveWindowOptionsToSession(winId, winName, winPattern)
+{
+  let pSetSessionWinPattern = (winPattern!=undefined) ? browser.sessions.setWindowValue(winId, "win_patt", winPattern) : Promise.resolve();
+  let pSetSessionWinName    = (winName!=undefined)    ? browser.sessions.setWindowValue(winId, "win_name", winName)    : Promise.resolve();
+  let pDone                 = Promise.all([pSetSessionWinName,pSetSessionWinPattern]);
+  return pDone;
+}
+
+/* loadWindowOptionsFromSession
+ * Takes window Id
+ * Fetch name and pattern from session
+ */
+function loadWindowOptionsFromSession(winId)
+{
+  let pGetSessionWinPattern = browser.sessions.getWindowValue(winId, "win_patt");
+  let pGetSessionWinName    = browser.sessions.getWindowValue(winId, "win_name");
+  let pDone                 = Promise.all([pGetSessionWinName,pGetSessionWinPattern]);
+  return pDone;
+}
+/* computeTitle
+ * Takes a shitload of arguments and compute a title (prefix)
+ * Returns the new title (prefix)
+ */
 function computeTitle(pattern, separator, name, origTitle, nbtab, browserInfo)
 {
   var title = "";
@@ -80,10 +127,19 @@ function computeTitle(pattern, separator, name, origTitle, nbtab, browserInfo)
   return title;
 }
 
+/* onError
+ * Takes an error message as argument
+ * Gives it to the logger
+ * Returns nothing
+ */
 function onError(error) {
   debugInfo(2, error);
 }
 
+/* debugInfo
+ * logging function
+ * TODO: load debuglevel from localstorage
+ */
 function debugInfo(level, info)
 {
   // false: debugging disabled for releases

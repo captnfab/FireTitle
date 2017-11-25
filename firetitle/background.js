@@ -1,75 +1,86 @@
-browser.browserAction.onClicked.addListener(() => browser.runtime.openOptionsPage());
-
-function applyOptions(tab_id)
+/* setTitleOfWinofTab
+ * Takes a shitload of parameters, one of them being the current tab
+ * Computes the new title for the window containing the current tab
+ * set the new title to the window
+ * Returns a promise that the title has been updated
+ */
+function setTitleOfWinofTab(localStor, browserInfo, currentTab, currentWin, currentWinTabs, sessionWinName, sessionWinPattern)
 {
-  function setWindowName(result, tab, browserInfo, nbtab)
-  {
-    separator = result.separator || default_options["sep"];
-    cur_win_name = result["win"+tab.windowId+"_name"] || result.def_win_name || default_options["win_name"];
-    cur_win_pattern = result["win"+tab.windowId+"_pattern"] || result.def_win_pattern || default_options["win_patt"];
-    newtitle = computeTitle(cur_win_pattern, separator, cur_win_name, tab.title, nbtab, browserInfo);
-    // XXX: Workarround for Webextension poor API
-    newtitle += separator;
-    var win_prop = {
-      titlePreface: newtitle
-    };
-    debugInfo(0, "Computed title(p="+cur_win_pattern+", s="+separator+", n="+cur_win_name+", t="+tab.title+") = " + newtitle + " (Wid=" + tab.windowId + ")");
-    browser.windows.update(tab.windowId, win_prop);
-  }
-
-  browser.storage.local.get().then(
-    (result) => {browser.tabs.get(tab_id).then(
-      (tab) => {browser.runtime.getBrowserInfo().then(
-        (info) => {browser.tabs.query({windowId: tab.windowId}).then(
-          (tabs) => {setWindowName(result, tab, info, tabs.length) }
-        )})})}).catch(onError);
+  separator = localStor.separator || default_options["sep"];
+  let currentWinName = sessionWinName ||  localStor.def_win_name || default_options["win_name"];
+  let currentWinPattern = sessionWinPattern || localStor.def_win_pattern || default_options["win_patt"];
+  newtitle = computeTitle(currentWinPattern, separator, currentWinName, currentTab.title, currentWinTabs.length, browserInfo);
+  // XXX: Workarround for Webextension poor API
+  newtitle += separator;
+  var win_prop = {
+    titlePreface: newtitle
+  };
+  debugInfo(0, "Computed title(p="+currentWinPattern+", s="+separator+", n="+currentWinName+", t="+currentTab.title+") = " + newtitle + " (Wid=" + currentTab.windowId + ")");
+  return browser.windows.update(currentTab.windowId, win_prop);
 }
 
-function readMsg(msg, sender)
+/* actionOnMessageReceived
+ * Takes a message and a sender
+ * update window's title accordingly
+ */
+function actionOnMessageReceived(msg, sender)
 {
   if(msg.message=="update")
   {
-    applyOptions(sender.tab.id);
+    refreshWinTitleOfTab(sender.tab.id);
   }
   else if(msg.message=="update-tab")
   {
-    applyOptions(msg.tabId);
+    onError(msg.tabId);
+    refreshWinTitleOfTab(msg.tabId);
   }
 }
 
-/* save default properties to new windows */
-function newWindow(win)
+/* actionOnNewWindow
+ * Takes a new window as argument
+ * Set default name and pattern as sessions values
+ * Update window's title
+ * Returns a promise that the action is done
+ */
+function actionOnNewWindow(win)
 {
-  function saveNewWindowProp(result)
-  {
-    var prop_set = {};
-    prop_set["win"+win.id+"_name"] = result.def_win_name;
-    prop_set["win"+win.id+"_pattern"] = result.def_win_pattern;
-    browser.storage.local.set(prop_set);
-  }
+  let pLocalStor      = browser.storage.local.get();
+  let pCurrentWinTabs = browser.tabs.query({windowId: win.id, active: true});
+  let pSaved          = pLocalStor.then((localStor) => { saveWindowOptionsToSession(win.id, localStor.def_win_name, localStor.def_win_pattern); });
+  let pDone           = Promise.all([pCurrentWinTabs,pSaved]).then((currentWinTabs) => { refreshWinTitleOfTab(currentWinTabs[0].id) });
+  return pDone;
 }
 
-/* update title when a tab is changed */
-function tabChanged(id, change, tab)
+/* actionOnTabChanged
+ * Takes a tab id, a change object and a tab status
+ * Update window's title
+ */
+function actionOnTabChanged(id, change, tab)
 {
   function propagate(tabs)
   {
     for(let tab of tabs)
-      applyOptions(tab.id)
+      refreshWinTitleOfTab(tab.id)
   }
   if(tab.active)
-    applyOptions(tab.id)
+    refreshWinTitleOfTab(tab.id)
   else
     browser.tabs.query({ active: true, windowId: tab.windowId}).then(propagate,onError);
 }
 
-/* update title when a tab is activated */
-function tabActivated(activeinfo)
+/* actionOnTabActivated
+ * Takes an active tab info
+ * Updates window's title
+ */
+function actionOnTabActivated(activeinfo)
 {
-  applyOptions(activeinfo.tabId);
+  refreshWinTitleOfTab(activeinfo.tabId);
 }
 
-browser.runtime.onMessage.addListener(readMsg);
-browser.windows.onCreated.addListener(newWindow);
-browser.tabs.onUpdated.addListener(tabChanged);
-browser.tabs.onActivated.addListener(tabActivated);
+browser.runtime.onMessage.addListener(actionOnMessageReceived);
+browser.windows.onCreated.addListener(actionOnNewWindow);
+browser.tabs.onUpdated.addListener(actionOnTabChanged);
+browser.tabs.onActivated.addListener(actionOnTabActivated);
+
+/* TODO: close any existing options page before */
+//browser.browserAction.onClicked.addListener(() => { browser.runtime.openOptionsPage() });

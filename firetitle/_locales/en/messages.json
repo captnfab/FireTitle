@@ -36,20 +36,20 @@
     "message": "Preview",
     "description": "Label of the preview for window's titles"
   },
-  "O_useCurrentPattern": {
+  "B_useCurrentPatternAsDefault": {
     "message": "Use current window's pattern",
-    "description": "Label for checkbox to use current window's pattern as default pattern"
+    "description": "Button label to use current window's pattern as default pattern"
   },
 
   "O_separator": {
     "message": "Separator",
     "description": "Option name for separator settings"
   },
-  "B_saveChanges": {
-    "message": "Save changes",
-    "description": "Button label for saving the changes made in the settings"
+  "B_applyCurPatternToExisting": {
+    "message": "Apply current pattern to opened windows",
+    "description": "Button label for applying current window's pattern to existing windows"
   },
-  "B_applyPatternToExisting": {
+  "B_applyDefPatternToExisting": {
     "message": "Apply default pattern to opened windows",
     "description": "Button label for applying default pattern to existing windows"
   },
