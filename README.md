@@ -1,7 +1,37 @@
 FireTitle
 =========
 
-An extension for **enhanced presentation of titles** in tabs and title bars of Firefox and Firefox-based browsers. 
+An extension for **enhanced presentation of titles** in tabs and title bars of
+Firefox and Firefox-based browsers. FireTitle allows you to label your Firefox
+browser windows with mnemonic titles containing useful information. Find the
+Firefox window you're looking for, fast.
+
+Usage
+=====
+Use Ctrl-; or Ctrl-, (depending on verison) for faster access
+to name-changing functionality. Or, move the CFT button from the customize panel
+to a toolbar.
+
+Patterns
+========
+Currently (0.1.7), the following options can be used as pattern:
+
+ - **m**: Browser's name (useless since it is already forcefully displayed)
+ - **v**: Browser's Version
+ - **b**: Browser's build ID
+ - **n**: User defined Window's Name
+ - **p**: User defined Profile's Name
+ - **t**: Documents title (useless since it is already forcefully displayed)
+ - **T**: Number of tabs
+ - **L**: Number of tabs loaded in memory
+ - **[custom text]**: Custom text
+
+Versions
+========
+The new _Crappy Firetitle_:
+
+- is for Firefox for Android 57.0 and later, Firefox 57.0 and later 
+- [is constrained](https://bugzilla.mozilla.org/show_bug.cgi?id=1396010#a13659144_582971) by [WebExtensions APIs](https://wiki.mozilla.org/WebExtensions).
 
 The original _FireTitle_:
 
@@ -10,10 +40,6 @@ The original _FireTitle_:
 - may be effectively passed through the [Extension Converter for SeaMonkey](http://addonconverter.fotokraina.com/)
 - does not work with Firefox Quantum.
 
-The new _Crappy Firetitle_: 
-
-- is for Firefox for Android 57.0 and later, Firefox 57.0 and later 
-- [is constrained](https://bugzilla.mozilla.org/show_bug.cgi?id=1396010#a13659144_582971) by [WebExtensions APIs](https://wiki.mozilla.org/WebExtensions).
 
 ## Links
 
