@@ -9,7 +9,7 @@ function refreshWinTitleOfTab(tab_id)
   let pBrowserInfo       = browser.runtime.getBrowserInfo();
   let pCurrentTab        = browser.tabs.get(tab_id);
   let pCurrentWin        = pCurrentTab.then((tab) => browser.windows.get(tab.windowId));
-  let pCurrentWinTabs    = pCurrentWin.then((win) => browser.tabs.query({windowId: win.id}));
+  let pCurrentWinTabs    = pCurrentWin.then((win) => browser.tabs.query({windowId: win.id})).then((tabs) => Promise.all(tabs.map(tab => browser.tabs.get(tab.id))));
   let pCurrentWinName    = pCurrentTab.then((tab) => browser.sessions.getWindowValue(tab.windowId, "win_name"));
   let pCurrentWinPattern = pCurrentTab.then((tab) => browser.sessions.getWindowValue(tab.windowId, "win_patt"));
 
@@ -45,7 +45,7 @@ function loadWindowOptionsFromSession(winId)
  * Takes a shitload of arguments and compute a title (prefix)
  * Returns the new title (prefix)
  */
-function computeTitle(pattern, separator, name, profileName, origTitle, nbtab, browserInfo)
+function computeTitle(pattern, separator, name, profileName, origTitle, curWinTabs, browserInfo)
 {
   var title = "";
   var nosepid = [];
@@ -85,15 +85,12 @@ function computeTitle(pattern, separator, name, profileName, origTitle, nbtab, b
         break;
       case 'T':
         // Number of tabs
-          match = nbtab;
+          match = curWinTabs.length;
           break;
-        /*
-      case 'g':
-        // Group name
-        match = this.getActiveGroupName();
-        if(!match) continue;
-        break;
-        */
+      case 'L':
+        // Number of loaded tabs
+          match = curWinTabs.filter(tab => tab.discarded == false).length;
+          break;
 
       case '[':
         // Text inside [ ] is copied. ] is escaped with ]]
