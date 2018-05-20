@@ -39,15 +39,21 @@ function actionOnMessageReceived(msg, sender)
 /* actionOnNewWindow
  * Takes a new window as argument
  * Set default name and pattern as sessions values
+ * unless such name already exists.
  * Update window's title
  * Returns a promise that the action is done
  */
 function actionOnNewWindow(win)
 {
-  let pLocalStor      = browser.storage.local.get();
   let pCurrentWinTabs = browser.tabs.query({windowId: win.id, active: true});
-  let pSaved          = pLocalStor.then((localStor) => { saveWindowOptionsToSession(win.id, localStor.def_win_name, localStor.def_win_pattern); });
-  let pDone           = Promise.all([pCurrentWinTabs,pSaved]).then((currentWinTabs) => { refreshWinTitleOfTab(currentWinTabs[0].id) });
+  let pDone = loadWindowOptionsFromSession(win.id)
+    .then((options) => { return refreshWinTitleOfTab(currentWinTabs[0].id); })
+    .catch(() => {
+      let pLocalStor      = browser.storage.local.get();
+      let pSaved          = pLocalStor.then((localStor) => { saveWindowOptionsToSession(win.id, localStor.def_win_name, localStor.def_win_pattern); });
+      let pBoth           = Promise.all([pCurrentWinTabs,pSaved]).then((currentWinTabs) => { refreshWinTitleOfTab(currentWinTabs[0].id) });
+      return pBoth;
+    });
   return pDone;
 }
 
