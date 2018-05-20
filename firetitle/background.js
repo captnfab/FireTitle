@@ -9,7 +9,7 @@ function setTitleOfWinofTab(localStor, browserInfo, currentTab, currentWin, curr
   separator             = localStor.separator !==undefined?localStor.separator:default_options["sep"];
   let currentWinName    = sessionWinName    !==undefined?sessionWinName   :(localStor.def_win_name    !==undefined?localStor.def_win_name   :default_options["win_name"]);
   let currentWinPattern = sessionWinPattern !==undefined?sessionWinPattern:(localStor.def_win_pattern !==undefined?localStor.def_win_pattern:default_options["win_patt"]);
-  newtitle = computeTitle(currentWinPattern, separator, currentWinName, currentTab.title, currentWinTabs.length, browserInfo);
+  newtitle = computeTitle(currentWinPattern, separator, currentWinName, localStor.cur_pro_name, currentTab.title, currentWinTabs.length, browserInfo);
   // XXX: Workarround for Webextension poor API
   newtitle += separator;
   var win_prop = {

@@ -28,6 +28,14 @@
     "message": "Window's name",
     "description": "Label of the window's name input"
   },
+  "OG_currentProfile": {
+    "message": "Current profile",
+    "description": "Option group name for profile's settings"
+  },
+  "O_profileName": {
+    "message": "Profile's name",
+    "description": "Label of the profile's name input"
+  },
   "O_titlePattern": {
     "message": "Title pattern",
     "description": "Label of the title's pattern input"

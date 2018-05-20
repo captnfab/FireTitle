@@ -6,6 +6,9 @@ document.querySelector("#O_def_win_name").innerText = browser.i18n.getMessage("O
 document.querySelector("#O_def_win_pattern").innerText = browser.i18n.getMessage("O_titlePattern");
 document.querySelector("#O_def_preview").innerText = browser.i18n.getMessage("O_preview");
 
+document.querySelector("#OG_currentProfile").innerText = browser.i18n.getMessage("OG_currentProfile");
+document.querySelector("#O_cur_pro_name").innerText = browser.i18n.getMessage("O_profileName");
+
 document.querySelector("#OG_separator").innerText = browser.i18n.getMessage("OG_separator");
 document.querySelector("#O_separator").innerText = browser.i18n.getMessage("O_separator");
 

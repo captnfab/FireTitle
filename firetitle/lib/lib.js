@@ -45,7 +45,7 @@ function loadWindowOptionsFromSession(winId)
  * Takes a shitload of arguments and compute a title (prefix)
  * Returns the new title (prefix)
  */
-function computeTitle(pattern, separator, name, origTitle, nbtab, browserInfo)
+function computeTitle(pattern, separator, name, profileName, origTitle, nbtab, browserInfo)
 {
   var title = "";
   var nosepid = [];
@@ -74,6 +74,10 @@ function computeTitle(pattern, separator, name, origTitle, nbtab, browserInfo)
       case 'n':
         // Window's Name
         match = name;
+        break;
+      case 'p':
+        // Profile's Name
+        match = profileName;
         break;
       case 't':
         // Title

@@ -64,6 +64,7 @@ function saveDefaultOptions()
 {
   const prop_set =
     {
+      cur_pro_name: document.querySelector("#cur_pro_name").value,
       def_win_name: document.querySelector("#def_win_name").value,
       def_win_pattern: document.querySelector("#def_win_pattern").value,
       separator: document.querySelector("#separator").value,
@@ -138,10 +139,11 @@ function updatePreview()
   let pBrowserInfo = browser.runtime.getBrowserInfo();
   let pDone = pBrowserInfo.then((info) =>
     {
+      var cur_pro_name = document.querySelector("#cur_pro_name");
       var def_win_name = document.querySelector("#def_win_name");
       var def_win_pattern = document.querySelector("#def_win_pattern");
       var separator = document.querySelector("#separator");
-      var preview_def = computeTitle(def_win_pattern.value, separator.value, def_win_name.value, "Hello world!", "nbtab", info, 0);
+      var preview_def = computeTitle(def_win_pattern.value, separator.value, def_win_name.value, cur_pro_name.value, "Hello world!", "nbtab", info, 0);
       document.querySelector("#def_win_preview").value=preview_def;
       document.querySelector("#def_win_preview").title=preview_def;
     }
