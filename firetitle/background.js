@@ -36,20 +36,6 @@ function actionOnMessageReceived(msg, sender)
   }
 }
 
-/* actionOnNewWindow
- * Takes a new window as argument
- * Try to restore data from session.
- * Update window's title
- * Returns a promise that the action is done
- */
-function actionOnNewWindow(win)
-{
-  let pCurrentWinTabs = browser.tabs.query({windowId: win.id, active: true});
-  let pDone = loadWindowOptionsFromSession(win.id)
-    .then((options) => { return refreshWinTitleOfTab(currentWinTabs[0].id); });
-  return pDone;
-}
-
 /* actionOnTabChanged
  * Takes a tab id, a change object and a tab status
  * Update window's title
@@ -77,7 +63,6 @@ function actionOnTabActivated(activeinfo)
 }
 
 browser.runtime.onMessage.addListener(actionOnMessageReceived);
-browser.windows.onCreated.addListener(actionOnNewWindow);
 browser.tabs.onUpdated.addListener(actionOnTabChanged);
 browser.tabs.onActivated.addListener(actionOnTabActivated);
 
