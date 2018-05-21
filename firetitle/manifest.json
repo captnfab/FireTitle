@@ -40,7 +40,7 @@
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
-        "default": "Ctrl+Semicolon"
+        "default": "Ctrl+Comma"
       },
       "description": "Go to FireTitle options page"
     }
