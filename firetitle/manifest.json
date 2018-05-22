@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Crappy Firetitle",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "default_locale": "en",
   "description": "__MSG_extensionDescription__",
   "icons": {
@@ -40,7 +40,8 @@
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
-        "default": "Ctrl+Comma"
+        "default": "Ctrl+Comma",
+        "mac": "Alt+Comma"
       },
       "description": "Go to FireTitle options page"
     }
