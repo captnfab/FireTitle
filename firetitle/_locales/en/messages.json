@@ -1,6 +1,6 @@
 {
   "extensionDescription": {
-    "message": "A beta webextension version of FireTitle which isn't fully functionnal.",
+    "message": "An add-on allowing the customization of Firefox windows' titles.",
     "description": "Description of the extension"
   },
 
@@ -64,13 +64,5 @@
   "B_moreinfo": {
     "message": "More info",
     "description": "Link label for help page"
-  },
-  "W_APIWarning": {
-    "message": "Due to Webextension limited API, the page title and the browser's name cannot be hidden from the titlebar. If you want this behavior to change, please support",
-    "description": "Warning about limited API"
-  },
-  "W_APIWarningURL": {
-    "message": "this feature request.",
-    "description": "Warning about limited API: link text"
   }
 }

@@ -1,27 +1,27 @@
 {
   "extensionDescription": {
-    "message": "A beta webextension version of FireTitle which isn't fully functionnal.",
-    "description": "Description of the extension"
+    "message": "Une extension permettant de personnaliser les titres des fenêtres de Firefox.",
+    "description": "Description de l’extension"
   },
 
   "OG_currentWindow": {
     "message": "Fenêtre courante",
-    "description": "Nom du groupe d'options pour les paramètres de la fenêtre courante"
+    "description": "Nom du groupe d’options pour les paramètres de la fenêtre courante"
   },
 
   "OG_existingWindows": {
     "message": "Fenêtres existantes",
-    "description": "Nom du groupe d'options pour les paramètres des fenêtres existantes"
+    "description": "Nom du groupe d’options pour les paramètres des fenêtres existantes"
   },
 
   "OG_defaultWindows": {
     "message": "Fenêtres par défaut",
-    "description": "Nom du groupe d'options pour les paramètres de la fenêtre par défaut"
+    "description": "Nom du groupe d’options pour les paramètres de la fenêtre par défaut"
   },
 
   "OG_separator": {
-    "message": "Separateur",
-    "description": "Nom du groupe d'options pour le séparateur"
+    "message": "Séparateur",
+    "description": "Nom du groupe d’options pour le séparateur"
   },
 
   "O_windowName": {
@@ -30,7 +30,7 @@
   },
   "OG_currentProfile": {
     "message": "Profil courant",
-    "description": "Option group name for profile's settings"
+    "description": "Option group name for profile’s settings"
   },
   "O_profileName": {
     "message": "Nom du profil",
@@ -42,7 +42,7 @@
   },
   "O_preview": {
     "message": "Aperçu",
-    "description": "Étiquette pour la zone d'aperçu du titre des fenêtres par défaut"
+    "description": "Étiquette pour la zone d’aperçu du titre des fenêtres par défaut"
   },
   "B_useCurrentPatternAsDefault": {
     "message": "Faire du motif actuel celui par défaut",
@@ -50,7 +50,7 @@
   },
 
   "O_separator": {
-    "message": "Separator",
+    "message": "Séparateur",
     "description": "Étiquette pour le champ Séparateur"
   },
   "B_applyCurPatternToExisting": {
@@ -63,14 +63,6 @@
   },
   "B_moreinfo": {
     "message": "En savoir plus",
-    "description": "Étiquette du lien vers la page d'aide."
-  },
-  "W_APIWarning": {
-    "message": "Due to Webextension limited API, the page title and the browser's name cannot be hidden from the titlebar. If you want this behavior to change, please support",
-    "description": "Warning about limited API"
-  },
-  "W_APIWarningURL": {
-    "message": "this feature request.",
-    "description": "Warning about limited API: link text"
+    "description": "Étiquette du lien vers la page d’aide."
   }
 }
