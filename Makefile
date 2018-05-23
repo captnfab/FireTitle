@@ -1,22 +1,18 @@
-.PHONY: all firetitle-crappy.zip firetitle-xul.xpi
-POFILES=$(wildcard firetitle-pot/*/*.po)
-LOFILES=$(wildcard firetitle/_locales/*/*.json)
+.PHONY: all crappy-firetitle.zip
 
-all: firetitle-crappy.zip firetitle-xul.xpi
+POFILES=$(wildcard _locales/*/*.po)
+LOFILES=$(wildcard _locales/*/*.json)
 
-firetitle-crappy.zip:
-	cd firetitle/;zip -r --exclude '*.swp' -FS ../firetitle-crappy.zip *
-firetitle-xul.xpi:
-	cd old-xul/; zip -r --exclude '*.swp' -FS ../firetitle-xul.zip *
-	mv firetitle-xul.zip firetitle-xul.xpi
+all: crappy-firetitle.zip
 
-firetitle-crappy-lang-import: $(patsubst firetitle-pot%.po,firetitle/_locales%.json,$(POFILES))
-firetitle-crappy-lang-export: $(patsubst firetitle/_locales%.json,firetitle-pot%.po,$(LOFILES))
+crappy-firetitle.zip:
+	zip -r --exclude '*.swp' --exclude '*.po' --exclude '*.zip' --exclude '*.md' --exclude 'res/' --exclude 'Makefile' -FS crappy-firetitle.zip *
 
-firetitle/_locales/%.json:
-	mkdir -p $(dir $@)
-	./update_locales.py $(patsubst firetitle/_locales%.json,firetitle-pot%.po,$@) firetitle/_locales/en/messages.json $@
+lang-import: $(POFILES:.po=.json)
+lang-export: $(LOFILES:.json=.po)
 
-firetitle-pot/%.po:
-	mkdir -p $(dir $@)
-	json2po --duplicate merge -t firetitle/_locales/en/messages.json -i $(patsubst firetitle-pot%.po,firetitle/_locales%.json,$@) -o $@
+%.json:
+	./update_locales.py $(@:.json=.po) _locales/en/messages.json $@
+
+%.po:
+	json2po --duplicate merge -t _locales/en/messages.json -i $(@:.po=.json) -o $@
