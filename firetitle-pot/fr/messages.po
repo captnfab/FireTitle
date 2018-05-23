@@ -1,0 +1,138 @@
+#. extracted from firetitle/_locales/en/messages.json, firetitle/_locales/fr/messages.json
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-23 12:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.3.0\n"
+
+#: .extensionDescription.message
+msgid "An add-on allowing the customization of Firefox windows' titles."
+msgstr ""
+"Une extension permettant de personnaliser les titres des fenêtres de Firefox."
+
+#: .extensionDescription.description
+msgid "Description of the extension"
+msgstr "Description de l’extension"
+
+#: .OG_currentWindow.message
+msgid "Current window"
+msgstr "Fenêtre courante"
+
+#: .OG_currentWindow.description
+msgid "Option group name for current window's settings"
+msgstr "Nom du groupe d’options pour les paramètres de la fenêtre courante"
+
+#: .OG_existingWindows.message
+msgid "Existing windows"
+msgstr "Fenêtres existantes"
+
+#: .OG_existingWindows.description
+msgid "Option group name for existing window's settings"
+msgstr "Nom du groupe d’options pour les paramètres des fenêtres existantes"
+
+#: .OG_defaultWindows.message
+msgid "Default windows"
+msgstr "Fenêtres par défaut"
+
+#: .OG_defaultWindows.description
+msgid "Option group name for default window's settings"
+msgstr "Nom du groupe d’options pour les paramètres de la fenêtre par défaut"
+
+#: .OG_separator.message
+#: .O_separator.message
+msgid "Separator"
+msgstr "Séparateur"
+
+#: .OG_separator.description
+msgid "Option group name for separator settings"
+msgstr "Nom du groupe d’options pour le séparateur"
+
+#: .O_windowName.message
+msgid "Window's name"
+msgstr "Nom de la fenêtre"
+
+#: .O_windowName.description
+msgid "Label of the window's name input"
+msgstr "Étiquette du champ Nom de la fenêtre"
+
+#: .OG_currentProfile.message
+msgid "Current profile"
+msgstr "Profil courant"
+
+#: .OG_currentProfile.description
+msgid "Option group name for profile's settings"
+msgstr "Option group name for profile’s settings"
+
+#: .O_profileName.message
+msgid "Profile's name"
+msgstr "Nom du profil"
+
+#: .O_profileName.description
+msgid "Label of the profile's name input"
+msgstr "Étiquette pour le champ Nom du profil"
+
+#: .O_titlePattern.message
+msgid "Title pattern"
+msgstr "Motif du titre"
+
+#: .O_titlePattern.description
+msgid "Label of the title's pattern input"
+msgstr "Étiquette pour le champ Motif du titre"
+
+#: .O_preview.message
+msgid "Preview"
+msgstr "Aperçu"
+
+#: .O_preview.description
+msgid "Label of the preview for default window's titles"
+msgstr "Étiquette pour la zone d’aperçu du titre des fenêtres par défaut"
+
+#: .B_useCurrentPatternAsDefault.message
+msgid "Use current pattern as default"
+msgstr "Faire du motif actuel celui par défaut"
+
+#: .B_useCurrentPatternAsDefault.description
+msgid "Button label to use current window's pattern as default pattern"
+msgstr ""
+"Étiquette du bouton pour utiliser le motif de la fenêtre comme motif par "
+"défaut"
+
+#: .O_separator.description
+msgid "Label of the separator input"
+msgstr "Étiquette pour le champ Séparateur"
+
+#: .B_applyCurPatternToExisting.message
+msgid "Apply current pattern to open windows"
+msgstr "Appliquer le motif actuel aux autres fenêtres"
+
+#: .B_applyCurPatternToExisting.description
+msgid "Button label for applying current window's pattern to existing windows"
+msgstr ""
+"Étiquette du bouton pour appliquer le motif de la fenêtre à toutes les "
+"fenêtres"
+
+#: .B_applyDefPatternToExisting.message
+msgid "Apply default pattern to open windows"
+msgstr "Appliquer le motif par défaut aux autres fenêtres"
+
+#: .B_applyDefPatternToExisting.description
+msgid "Button label for applying default pattern to existing windows"
+msgstr ""
+"Étiquette du bouton pour appliquer le motif par défaut aux fenêtres déjà "
+"ouvertes"
+
+#: .B_moreinfo.message
+msgid "More info"
+msgstr "En savoir plus"
+
+#: .B_moreinfo.description
+msgid "Link label for help page"
+msgstr "Étiquette du lien vers la page d’aide."

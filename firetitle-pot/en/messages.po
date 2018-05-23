@@ -1,0 +1,131 @@
+#. extracted from firetitle/_locales/en/messages.json, firetitle/_locales/en/messages.json
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-23 12:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.3.0\n"
+
+#: .extensionDescription.message
+msgid "An add-on allowing the customization of Firefox windows' titles."
+msgstr "An add-on allowing the customization of Firefox windows' titles."
+
+#: .extensionDescription.description
+msgid "Description of the extension"
+msgstr "Description of the extension"
+
+#: .OG_currentWindow.message
+msgid "Current window"
+msgstr "Current window"
+
+#: .OG_currentWindow.description
+msgid "Option group name for current window's settings"
+msgstr "Option group name for current window's settings"
+
+#: .OG_existingWindows.message
+msgid "Existing windows"
+msgstr "Existing windows"
+
+#: .OG_existingWindows.description
+msgid "Option group name for existing window's settings"
+msgstr "Option group name for existing window's settings"
+
+#: .OG_defaultWindows.message
+msgid "Default windows"
+msgstr "Default windows"
+
+#: .OG_defaultWindows.description
+msgid "Option group name for default window's settings"
+msgstr "Option group name for default window's settings"
+
+#: .OG_separator.message
+#: .O_separator.message
+msgid "Separator"
+msgstr "Separator"
+
+#: .OG_separator.description
+msgid "Option group name for separator settings"
+msgstr "Option group name for separator settings"
+
+#: .O_windowName.message
+msgid "Window's name"
+msgstr "Window's name"
+
+#: .O_windowName.description
+msgid "Label of the window's name input"
+msgstr "Label of the window's name input"
+
+#: .OG_currentProfile.message
+msgid "Current profile"
+msgstr "Current profile"
+
+#: .OG_currentProfile.description
+msgid "Option group name for profile's settings"
+msgstr "Option group name for profile's settings"
+
+#: .O_profileName.message
+msgid "Profile's name"
+msgstr "Profile's name"
+
+#: .O_profileName.description
+msgid "Label of the profile's name input"
+msgstr "Label of the profile's name input"
+
+#: .O_titlePattern.message
+msgid "Title pattern"
+msgstr "Title pattern"
+
+#: .O_titlePattern.description
+msgid "Label of the title's pattern input"
+msgstr "Label of the title's pattern input"
+
+#: .O_preview.message
+msgid "Preview"
+msgstr "Preview"
+
+#: .O_preview.description
+msgid "Label of the preview for default window's titles"
+msgstr "Label of the preview for default window's titles"
+
+#: .B_useCurrentPatternAsDefault.message
+msgid "Use current pattern as default"
+msgstr "Use current pattern as default"
+
+#: .B_useCurrentPatternAsDefault.description
+msgid "Button label to use current window's pattern as default pattern"
+msgstr "Button label to use current window's pattern as default pattern"
+
+#: .O_separator.description
+msgid "Label of the separator input"
+msgstr "Label of the separator input"
+
+#: .B_applyCurPatternToExisting.message
+msgid "Apply current pattern to open windows"
+msgstr "Apply current pattern to open windows"
+
+#: .B_applyCurPatternToExisting.description
+msgid "Button label for applying current window's pattern to existing windows"
+msgstr "Button label for applying current window's pattern to existing windows"
+
+#: .B_applyDefPatternToExisting.message
+msgid "Apply default pattern to open windows"
+msgstr "Apply default pattern to open windows"
+
+#: .B_applyDefPatternToExisting.description
+msgid "Button label for applying default pattern to existing windows"
+msgstr "Button label for applying default pattern to existing windows"
+
+#: .B_moreinfo.message
+msgid "More info"
+msgstr "More info"
+
+#: .B_moreinfo.description
+msgid "Link label for help page"
+msgstr "Link label for help page"
