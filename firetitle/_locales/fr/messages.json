@@ -1,0 +1,76 @@
+{
+  "extensionDescription": {
+    "message": "A beta webextension version of FireTitle which isn't fully functionnal.",
+    "description": "Description of the extension"
+  },
+
+  "OG_currentWindow": {
+    "message": "Fenêtre courante",
+    "description": "Nom du groupe d'options pour les paramètres de la fenêtre courante"
+  },
+
+  "OG_existingWindows": {
+    "message": "Fenêtres existantes",
+    "description": "Nom du groupe d'options pour les paramètres des fenêtres existantes"
+  },
+
+  "OG_defaultWindows": {
+    "message": "Fenêtres par défaut",
+    "description": "Nom du groupe d'options pour les paramètres de la fenêtre par défaut"
+  },
+
+  "OG_separator": {
+    "message": "Separateur",
+    "description": "Nom du groupe d'options pour le séparateur"
+  },
+
+  "O_windowName": {
+    "message": "Nom de la fenêtre",
+    "description": "Étiquette du champ Nom de la fenêtre"
+  },
+  "OG_currentProfile": {
+    "message": "Profil courant",
+    "description": "Option group name for profile's settings"
+  },
+  "O_profileName": {
+    "message": "Nom du profil",
+    "description": "Étiquette pour le champ Nom du profil"
+  },
+  "O_titlePattern": {
+    "message": "Motif du titre",
+    "description": "Étiquette pour le champ Motif du titre"
+  },
+  "O_preview": {
+    "message": "Aperçu",
+    "description": "Étiquette pour la zone d'aperçu du titre des fenêtres par défaut"
+  },
+  "B_useCurrentPatternAsDefault": {
+    "message": "Faire du motif actuel celui par défaut",
+    "description": "Étiquette du bouton pour utiliser le motif de la fenêtre comme motif par défaut"
+  },
+
+  "O_separator": {
+    "message": "Separator",
+    "description": "Étiquette pour le champ Séparateur"
+  },
+  "B_applyCurPatternToExisting": {
+    "message": "Appliquer le motif actuel aux autres fenêtres",
+    "description": "Étiquette du bouton pour appliquer le motif de la fenêtre à toutes les fenêtres"
+  },
+  "B_applyDefPatternToExisting": {
+    "message": "Appliquer le motif par défaut aux autres fenêtres",
+    "description": "Étiquette du bouton pour appliquer le motif par défaut aux fenêtres déjà ouvertes"
+  },
+  "B_moreinfo": {
+    "message": "En savoir plus",
+    "description": "Étiquette du lien vers la page d'aide."
+  },
+  "W_APIWarning": {
+    "message": "Due to Webextension limited API, the page title and the browser's name cannot be hidden from the titlebar. If you want this behavior to change, please support",
+    "description": "Warning about limited API"
+  },
+  "W_APIWarningURL": {
+    "message": "this feature request.",
+    "description": "Warning about limited API: link text"
+  }
+}

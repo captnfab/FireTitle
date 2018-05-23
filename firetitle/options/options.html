@@ -8,48 +8,42 @@
   </head>
 
   <body>
-    <p id="APIWarning" class="warning">
-    <span>Due to Webextension limited API, the page title and the browser's name
-    cannot be hidden from the titlebar. If you want this behavior to change,
-    please support</span> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1396010">
-    this feature request</a>.
-    </p>
     <form>
     <fieldset class="clear-options">
-      <legend class="title" id="OG_currentProfile">Profil courant</legend>
+      <legend class="title" id="OG_currentProfile">Current profile</legend>
       <div>
-        <label id="O_cur_pro_name" for="cur_pro_name">Nom du profil</label>
+        <label id="O_cur_pro_name" for="cur_pro_name">Profile's name</label>
         <input type="text" id="cur_pro_name" />
       </div>
     </fieldset>
     <fieldset class="clear-options">
-      <legend class="title" id="OG_defaultWindows">Fenêtres par défaut</legend>
+      <legend class="title" id="OG_defaultWindows">Default windows</legend>
       <div>
-        <label id="O_def_win_name" for="def_win_name">Nom de la fenêtre</label>
+        <label id="O_def_win_name" for="def_win_name">Window's name</label>
         <input type="text" id="def_win_name" />
       </div>
       <div>
-        <label id="O_def_win_pattern" for="def_win_pattern">Motif du titre</label>
+        <label id="O_def_win_pattern" for="def_win_pattern">Title pattern</label>
         <input type="text" id="def_win_pattern" />
       </div>
       <div class="disabled">
-        <label id="O_def_preview" for="def_win_preview">Aperçu</label>
+        <label id="O_def_preview" for="def_win_preview">Preview</label>
         <input type="text" disabled="disabled" id="def_win_preview" />
       </div>
     </fieldset>
     <fieldset class="clear-options">
-      <legend class="title" id="OG_separator">Séparateur</legend>
+      <legend class="title" id="OG_separator">Separator</legend>
       <div>
-        <label id="O_separator" for="separator">Séparateur</label>
+        <label id="O_separator" for="separator">Separator</label>
         <input type="text" id="separator" />
       </div>
     </fieldset>
     <fieldset class="clear-options">
-      <legend class="title" id="OG_existingWindows">Fenêtres existantes</legend>
-      <input type="button" value="Appliquer le motif par défaut aux autres fenêtres" id="apply-default-pattern-to-others" />
+      <legend class="title" id="OG_existingWindows">Existing windows</legend>
+      <input type="button" value="Apply default pattern to open windows" id="apply-default-pattern-to-others" />
     </fieldset>
 
-    <a href="#" id="more-info" target="_blank">Plus d'infos</a>
+    <a href="#" id="more-info" target="_blank">More info</a>
     </form>
     <script src="default.js"></script>
     <script src="../lib/lib.js"></script>

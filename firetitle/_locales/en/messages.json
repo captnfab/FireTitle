@@ -42,28 +42,28 @@
   },
   "O_preview": {
     "message": "Preview",
-    "description": "Label of the preview for window's titles"
+    "description": "Label of the preview for default window's titles"
   },
   "B_useCurrentPatternAsDefault": {
-    "message": "Use current window's pattern",
+    "message": "Use current pattern as default",
     "description": "Button label to use current window's pattern as default pattern"
   },
 
   "O_separator": {
     "message": "Separator",
-    "description": "Option name for separator settings"
+    "description": "Label of the separator input"
   },
   "B_applyCurPatternToExisting": {
-    "message": "Apply current pattern to opened windows",
+    "message": "Apply current pattern to open windows",
     "description": "Button label for applying current window's pattern to existing windows"
   },
   "B_applyDefPatternToExisting": {
-    "message": "Apply default pattern to opened windows",
+    "message": "Apply default pattern to open windows",
     "description": "Button label for applying default pattern to existing windows"
   },
   "B_moreinfo": {
     "message": "More info",
-    "description": "Link label for help and more info page"
+    "description": "Link label for help page"
   },
   "W_APIWarning": {
     "message": "Due to Webextension limited API, the page title and the browser's name cannot be hidden from the titlebar. If you want this behavior to change, please support",
