@@ -40,6 +40,11 @@ The original _FireTitle_:
 - may be effectively passed through the [Extension Converter for SeaMonkey](http://addonconverter.fotokraina.com/)
 - does not work with Firefox Quantum.
 
+License
+=======
+
+Firetitle and Crappy Firetitle are free software, licensed under the GPL2.
+
 
 ## Links
 
