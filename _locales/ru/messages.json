@@ -1,1 +1,62 @@
-{}
+{
+    "extensionDescription": {
+        "message": "Это расширение позволяет настраивать заголовок окон Firefox'а",
+        "description": "Description of the extension"
+    },
+    "OG_currentWindow": {
+        "message": "Текущее окно",
+        "description": "Option group name for current window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "Существующие окна",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_defaultWindows": {
+        "message": "Окна по умолчанию",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_separator": {
+        "message": "Разделитель",
+        "description": "Option group name for separator settings"
+    },
+    "O_windowName": {
+        "message": "Заголовок окна",
+        "description": "Label of the window's name input"
+    },
+    "OG_currentProfile": {
+        "message": "Текущий профиль",
+        "description": "Option group name for profile's settings"
+    },
+    "O_profileName": {
+        "message": "Название профиля",
+        "description": "Label of the profile's name input"
+    },
+    "O_titlePattern": {
+        "message": "Шаблон заголовка",
+        "description": "Label of the title's pattern input"
+    },
+    "O_preview": {
+        "message": "Предварительный просмотр",
+        "description": "Label of the preview for default window's titles"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "Использовать текущий шаблон по умолчанию",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "O_separator": {
+        "message": "Разделитель",
+        "description": "Label of the separator input"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "Применить текущий шаблон к открытым окнам",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "Применить шаблон по умолчанию к открытым окнам",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "B_moreinfo": {
+        "message": "Подробнее",
+        "description": "Link label for help page"
+    }
+}
