@@ -1,1 +1,14 @@
-{}
+{
+    "OG_currentWindow": {
+        "message": "Aktuelles Fenster",
+        "description": "Option group name for current window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "Vorhandene Fenster",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_separator": {
+        "message": "Trennzeichen",
+        "description": "Option group name for separator settings"
+    }
+}
