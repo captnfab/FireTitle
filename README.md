@@ -8,9 +8,8 @@ Firefox window you're looking for, fast.
 
 Usage
 =====
-Use Ctrl-; or Ctrl-, (depending on verison) for faster access
-to name-changing functionality. Or, move the CFT button from the customize panel
-to a toolbar.
+Use Ctrl-, (Alt-, on macOS) for faster access to name-changing functionality.
+Or, move the CFT button from the customize panel to a toolbar.
 
 Patterns
 ========
@@ -25,6 +24,13 @@ Currently (0.1.7), the following options can be used as pattern:
  - **T**: Number of tabs
  - **L**: Number of tabs loaded in memory
  - **[custom text]**: Custom text
+
+Languages
+=========
+If Crappy FireTitle isn't translated in your language, you can help us!
+
+Please go to our [Collaborative Translation Website](https://hosted.weblate.org/projects/crappy-firetitle/translations/) and
+contribute to the translations you're interested in.
 
 Versions
 ========
