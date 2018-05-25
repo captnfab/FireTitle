@@ -111,7 +111,7 @@ function setDefPatternForOthers()
 
   let pWins =  browser.windows.getAll({windowTypes: ["normal"]});
   let pApply = pWins.then((wins) => {
-    for(win of wins) saveWindowOptionsToSession(win.id, undefined, cur_win_pattern);
+    for(win of wins) saveWindowOptionsToSession(win.id, undefined, def_win_pattern);
   });
   let pDone = pApply.then(updateAllWindowsTitles);
   return pDone;
@@ -184,6 +184,7 @@ function fillFormWithDefaultOptions()
 
   let pFillOptions = pLocalStor.then((localStor) =>
     {
+      document.querySelector("#cur_pro_name").value = localStor.cur_pro_name || default_options["pro_name"];
       document.querySelector("#def_win_name").value = localStor.def_win_name || default_options["win_name"];
       document.querySelector("#def_win_pattern").value = localStor.def_win_pattern || default_options["win_patt"];
       document.querySelector("#separator").value = localStor.separator || default_options["sep"];
