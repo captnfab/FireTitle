@@ -13,22 +13,22 @@
       <legend class="title" id="OG_currentWindow">Current window</legend>
       <div>
         <label id="O_cur_win_name" for="cur_win_name">Window's name</label>
-        <input type="text" id="cur_win_name" autocomplete="off" />
+        <input type="text" id="cur_win_name" autocomplete="off" tabindex="1" autofocus="autofocus" />
       </div>
       <div>
         <label id="O_cur_win_pattern" for="cur_win_pattern">Title pattern</label>
-        <input type="text" id="cur_win_pattern" autocomplete="off" />
+        <input type="text" id="cur_win_pattern" autocomplete="off" tabindex="2" />
       </div>
     </fieldset>
 
     <fieldset class="clear-options">
       <legend class="title" id="OG_defaultWindows">Default windows</legend>
-      <input type="button" value="Use current pattern as default" id="set-pattern-as-default" />
+      <input type="button" value="Use current pattern as default" id="set-pattern-as-default" tabindex="3" />
     </fieldset>
 
     <fieldset class="clear-options">
       <legend class="title" id="OG_existingWindows">Existing windows</legend>
-      <input type="button" value="Apply current pattern to open windows" id="apply-pattern-to-others" />
+      <input type="button" value="Apply current pattern to open windows" id="apply-pattern-to-others" tabindex="4" />
     </fieldset>
 
     </form>
