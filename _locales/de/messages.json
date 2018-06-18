@@ -10,5 +10,29 @@
     "OG_separator": {
         "message": "Trennzeichen",
         "description": "Option group name for separator settings"
+    },
+    "extensionDescription": {
+        "message": "Ein Add-On, das die Anpassung der Titel von Firefox-Fenstern ermöglicht.",
+        "description": "Description of the extension"
+    },
+    "O_windowName": {
+        "message": "Fenstername",
+        "description": "Label of the window's name input"
+    },
+    "OG_currentProfile": {
+        "message": "Aktuelles Profil",
+        "description": "Option group name for profile's settings"
+    },
+    "O_profileName": {
+        "message": "Profilname",
+        "description": "Label of the profile's name input"
+    },
+    "O_preview": {
+        "message": "Vorschau",
+        "description": "Label of the preview for default window's titles"
+    },
+    "B_moreinfo": {
+        "message": "Mehr Infos",
+        "description": "Link label for help page"
     }
 }
