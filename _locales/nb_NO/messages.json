@@ -1,1 +1,62 @@
-{}
+{
+    "extensionDescription": {
+        "message": "Et tillegg som tillater tilpasning av vindustitler i Firefox.",
+        "description": "Description of the extension"
+    },
+    "OG_currentWindow": {
+        "message": "Gjeldende vindu",
+        "description": "Option group name for current window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "Eksisterende vindu",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_defaultWindows": {
+        "message": "Forvalgte vindu",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_separator": {
+        "message": "Inndeler",
+        "description": "Option group name for separator settings"
+    },
+    "O_windowName": {
+        "message": "Vindusnavn",
+        "description": "Label of the window's name input"
+    },
+    "OG_currentProfile": {
+        "message": "Gjeldende profil",
+        "description": "Option group name for profile's settings"
+    },
+    "O_profileName": {
+        "message": "Profilens navn",
+        "description": "Label of the profile's name input"
+    },
+    "O_titlePattern": {
+        "message": "Flismønster",
+        "description": "Label of the title's pattern input"
+    },
+    "O_preview": {
+        "message": "Forhåndsvisning",
+        "description": "Label of the preview for default window's titles"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "Bruk gjeldende mønster som forvalg",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "O_separator": {
+        "message": "Inndeler",
+        "description": "Label of the separator input"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "Bruk gjeldende mønster på åpne vindu",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "Bruk forvalgt mønster på åpne vindu",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "B_moreinfo": {
+        "message": "Mer info",
+        "description": "Link label for help page"
+    }
+}
