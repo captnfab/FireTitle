@@ -1,1 +1,62 @@
-{}
+{
+    "extensionDescription": {
+        "message": "Een add-on die je in staat stelt om de Firefox-venstertitels aan te passen.",
+        "description": "Description of the extension"
+    },
+    "OG_currentWindow": {
+        "message": "Huidig venster",
+        "description": "Option group name for current window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "Bestaande vensters",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_defaultWindows": {
+        "message": "Standaardvensters",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_separator": {
+        "message": "Scheidingsteken",
+        "description": "Option group name for separator settings"
+    },
+    "O_windowName": {
+        "message": "Vensternaam",
+        "description": "Label of the window's name input"
+    },
+    "OG_currentProfile": {
+        "message": "Huidig profiel",
+        "description": "Option group name for profile's settings"
+    },
+    "O_profileName": {
+        "message": "Profielnaam",
+        "description": "Label of the profile's name input"
+    },
+    "O_titlePattern": {
+        "message": "Titelpatroon",
+        "description": "Label of the title's pattern input"
+    },
+    "O_preview": {
+        "message": "Voorbeeld",
+        "description": "Label of the preview for default window's titles"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "Huidig patroon instellen als standaard",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "O_separator": {
+        "message": "Scheidingsteken",
+        "description": "Label of the separator input"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "Huidig patroon toepassen op geopende vensters",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "Standaardpatroon toepassen op geopende vensters",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "B_moreinfo": {
+        "message": "Meer informatie",
+        "description": "Link label for help page"
+    }
+}
