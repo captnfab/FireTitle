@@ -34,5 +34,29 @@
     "B_moreinfo": {
         "message": "Mehr Infos",
         "description": "Link label for help page"
+    },
+    "OG_defaultWindows": {
+        "message": "Standardfenster",
+        "description": "Option group name for default window's settings"
+    },
+    "O_titlePattern": {
+        "message": "Titelmuster",
+        "description": "Label of the title's pattern input"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "Nutze aktuelles Muster als Voreinstellung",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "O_separator": {
+        "message": "Trennzeichen",
+        "description": "Label of the separator input"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "Aktuelles Muster für vorhandene Fenster verwenden",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "Voreinstellung auf vorhandene Fenster anwenden",
+        "description": "Button label for applying default pattern to existing windows"
     }
 }
