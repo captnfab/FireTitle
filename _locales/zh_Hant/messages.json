@@ -1,1 +1,62 @@
-{}
+{
+    "extensionDescription": {
+        "message": "一個附加元件，允許自定義Firefox 視窗標題。",
+        "description": "Description of the extension"
+    },
+    "OG_currentWindow": {
+        "message": "目前視窗",
+        "description": "Option group name for current window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "現有視窗",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_defaultWindows": {
+        "message": "預設視窗",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_separator": {
+        "message": "分離",
+        "description": "Option group name for separator settings"
+    },
+    "O_windowName": {
+        "message": "視窗名稱",
+        "description": "Label of the window's name input"
+    },
+    "OG_currentProfile": {
+        "message": "當前設定檔案",
+        "description": "Option group name for profile's settings"
+    },
+    "O_profileName": {
+        "message": "個人資料的名稱",
+        "description": "Label of the profile's name input"
+    },
+    "O_titlePattern": {
+        "message": "標題模式",
+        "description": "Label of the title's pattern input"
+    },
+    "O_preview": {
+        "message": "預覽",
+        "description": "Label of the preview for default window's titles"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "使用目前模式設為預設值",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "O_separator": {
+        "message": "分離",
+        "description": "Label of the separator input"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "套用目前模式打開視窗",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "套用預設模式打開視窗",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "B_moreinfo": {
+        "message": "更多資訊",
+        "description": "Link label for help page"
+    }
+}
