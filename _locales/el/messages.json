@@ -1,1 +1,26 @@
-{}
+{
+    "extensionDescription": {
+        "message": "Ένα πρόσθετο που επιτρέπει την προσαρμογή των τίτλων των παραθύρων του Firefox.",
+        "description": "Description of the extension"
+    },
+    "OG_currentWindow": {
+        "message": "Τρέχον παράθυρο",
+        "description": "Option group name for current window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "Υπάρχοντα παράθυρα",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_defaultWindows": {
+        "message": "Προεπιλεγμένα παράθυρα",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_separator": {
+        "message": "Διαχωριστής",
+        "description": "Option group name for separator settings"
+    },
+    "O_windowName": {
+        "message": "Όνομα παραθύρου",
+        "description": "Label of the window's name input"
+    }
+}
