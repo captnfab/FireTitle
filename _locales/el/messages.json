@@ -22,5 +22,21 @@
     "O_windowName": {
         "message": "Όνομα παραθύρου",
         "description": "Label of the window's name input"
+    },
+    "OG_currentProfile": {
+        "message": "Τρέχων Προφίλ",
+        "description": "Option group name for profile's settings"
+    },
+    "O_profileName": {
+        "message": "Όνομα προφίλ",
+        "description": "Label of the profile's name input"
+    },
+    "O_titlePattern": {
+        "message": "Μοτίβο τίτλου",
+        "description": "Label of the title's pattern input"
+    },
+    "O_preview": {
+        "message": "Προεπισκόπηση",
+        "description": "Label of the preview for default window's titles"
     }
 }
