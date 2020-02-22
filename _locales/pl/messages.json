@@ -1,1 +1,50 @@
-{}
+{
+    "OG_currentWindow": {
+        "message": "Obecne okno",
+        "description": "Option group name for current window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "Istniejące okna",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_defaultWindows": {
+        "message": "Domyślne okna",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_separator": {
+        "message": "Separator",
+        "description": "Option group name for separator settings"
+    },
+    "O_windowName": {
+        "message": "Nazwa okna",
+        "description": "Label of the window's name input"
+    },
+    "OG_currentProfile": {
+        "message": "Obecny profil",
+        "description": "Option group name for profile's settings"
+    },
+    "O_profileName": {
+        "message": "Nazwa profilu",
+        "description": "Label of the profile's name input"
+    },
+    "O_preview": {
+        "message": "Podgląd",
+        "description": "Label of the preview for default window's titles"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "Użyj bieżącego wzorca jako domyślnego",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "Zastosuj bieżący wzór, aby otworzyć okna",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "Zastosuj domyślny wzór, aby otworzyć okna",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "B_moreinfo": {
+        "message": "Więcej informacji",
+        "description": "Link label for help page"
+    }
+}
