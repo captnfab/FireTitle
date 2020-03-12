@@ -10,5 +10,53 @@
     "OG_existingWindows": {
         "message": "既存のウィンドウ",
         "description": "Option group name for existing window's settings"
+    },
+    "extensionDescription": {
+        "message": "Firefoxのウィンドウタイトルをカスタマイズ可能にするアドオン",
+        "description": "Description of the extension"
+    },
+    "OG_separator": {
+        "message": "セパレーター",
+        "description": "Option group name for separator settings"
+    },
+    "O_windowName": {
+        "message": "ウィンドウ名",
+        "description": "Label of the window's name input"
+    },
+    "OG_currentProfile": {
+        "message": "カレントプロファイル",
+        "description": "Option group name for profile's settings"
+    },
+    "O_profileName": {
+        "message": "プロファイル名",
+        "description": "Label of the profile's name input"
+    },
+    "O_titlePattern": {
+        "message": "タイトルの規則",
+        "description": "Label of the title's pattern input"
+    },
+    "O_preview": {
+        "message": "プレビュー",
+        "description": "Label of the preview for default window's titles"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "現在のパターンをデフォルトとして使用する",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "O_separator": {
+        "message": "セパレーター",
+        "description": "Label of the separator input"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "開いているウィンドウに現在のパターンを適用する",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "開いているウィンドウにデフォルトのパターンを適用する",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "B_moreinfo": {
+        "message": "詳しく",
+        "description": "Link label for help page"
     }
 }
