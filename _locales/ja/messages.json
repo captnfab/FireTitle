@@ -1,1 +1,14 @@
-{}
+{
+    "OG_currentWindow": {
+        "message": "現在のウィンドウ",
+        "description": "Option group name for current window's settings"
+    },
+    "OG_defaultWindows": {
+        "message": "規定のウィンドウグループ",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "既存のウィンドウ",
+        "description": "Option group name for existing window's settings"
+    }
+}
