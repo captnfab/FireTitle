@@ -38,5 +38,25 @@
     "O_preview": {
         "message": "Προεπισκόπηση",
         "description": "Label of the preview for default window's titles"
+    },
+    "B_moreinfo": {
+        "message": "Περισσότερες πληροφορίες",
+        "description": "Link label for help page"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "Εφαρμογή προεπιλεγμένου μοτίβου",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "Εφαρμογή τρέχον μοτίβου στο παράθυρο",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "O_separator": {
+        "message": "Διαχωριστικό",
+        "description": "Label of the separator input"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "Χρήση του τρέχον μοτίβου ως προεπιλογή",
+        "description": "Button label to use current window's pattern as default pattern"
     }
 }
