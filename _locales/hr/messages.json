@@ -1,1 +1,62 @@
-{}
+{
+    "B_moreinfo": {
+        "message": "Informacije",
+        "description": "Link label for help page"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "Primijeni standardni uzorak na otvorene prozore",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "Primijeni trenutačni uzorak na otvorene prozore",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "O_separator": {
+        "message": "Znak razdvajanja",
+        "description": "Label of the separator input"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "Standardno koristi trenutačni uzorak",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "O_preview": {
+        "message": "Pregled",
+        "description": "Label of the preview for default window's titles"
+    },
+    "O_titlePattern": {
+        "message": "Uzorak naslova",
+        "description": "Label of the title's pattern input"
+    },
+    "O_profileName": {
+        "message": "Ime profila",
+        "description": "Label of the profile's name input"
+    },
+    "OG_currentProfile": {
+        "message": "Trenutačni profil",
+        "description": "Option group name for profile's settings"
+    },
+    "O_windowName": {
+        "message": "Ime prozora",
+        "description": "Label of the window's name input"
+    },
+    "OG_separator": {
+        "message": "Znak razdvajanja",
+        "description": "Option group name for separator settings"
+    },
+    "OG_defaultWindows": {
+        "message": "Standardni prozor",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "Postojeći prozor",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_currentWindow": {
+        "message": "Trenutačni prozor",
+        "description": "Option group name for current window's settings"
+    },
+    "extensionDescription": {
+        "message": "Dodatak za prilagođavanje naslova Firefox prozora.",
+        "description": "Description of the extension"
+    }
+}
