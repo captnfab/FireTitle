@@ -50,5 +50,9 @@
     "O_titlePattern": {
         "message": "Wzór tytułu",
         "description": "Label of the title's pattern input"
+    },
+    "O_separator": {
+        "message": "Separator",
+        "description": "Label of the separator input"
     }
 }
