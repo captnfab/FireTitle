@@ -48,7 +48,7 @@
         "description": "Link label for help page"
     },
     "O_titlePattern": {
-        "message": "Wzór tytułu",
+        "message": "Wzorzec tytułu",
         "description": "Label of the title's pattern input"
     },
     "O_separator": {
