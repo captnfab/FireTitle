@@ -46,5 +46,9 @@
     "B_moreinfo": {
         "message": "Więcej informacji",
         "description": "Link label for help page"
+    },
+    "O_titlePattern": {
+        "message": "Wzór tytułu",
+        "description": "Label of the title's pattern input"
     }
 }
