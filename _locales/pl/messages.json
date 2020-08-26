@@ -54,5 +54,9 @@
     "O_separator": {
         "message": "Separator",
         "description": "Label of the separator input"
+    },
+    "extensionDescription": {
+        "message": "Dodatek umożliwiający dostosowanie tytułów okien Firefoksa.",
+        "description": "Description of the extension"
     }
 }
