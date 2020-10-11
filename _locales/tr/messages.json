@@ -1,1 +1,62 @@
-{}
+{
+    "B_moreinfo": {
+        "message": "Daha fazla bilgi",
+        "description": "Link label for help page"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "Öntanımlı kalıbı açık pencerelere uygula",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "Geçerli kalıbı açık pencerelere uygula",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "O_separator": {
+        "message": "Ayırıcı",
+        "description": "Label of the separator input"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "Geçerli deseni öntanımlı olarak kullan",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "O_preview": {
+        "message": "Ön izleme",
+        "description": "Label of the preview for default window's titles"
+    },
+    "O_titlePattern": {
+        "message": "Başlık kalıbı",
+        "description": "Label of the title's pattern input"
+    },
+    "O_profileName": {
+        "message": "Profilin adı",
+        "description": "Label of the profile's name input"
+    },
+    "OG_currentProfile": {
+        "message": "Geçerli profil",
+        "description": "Option group name for profile's settings"
+    },
+    "O_windowName": {
+        "message": "Pencerenin adı",
+        "description": "Label of the window's name input"
+    },
+    "OG_separator": {
+        "message": "Ayırıcı",
+        "description": "Option group name for separator settings"
+    },
+    "OG_defaultWindows": {
+        "message": "Öntanımlı pencere",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "Mevcut pencereler",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_currentWindow": {
+        "message": "Geçerli pencere",
+        "description": "Option group name for current window's settings"
+    },
+    "extensionDescription": {
+        "message": "Firefox pencere başlıklarının özelleştirilmesine izin veren bir eklenti.",
+        "description": "Description of the extension"
+    }
+}
