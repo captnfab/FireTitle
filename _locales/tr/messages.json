@@ -16,7 +16,7 @@
         "description": "Label of the separator input"
     },
     "B_useCurrentPatternAsDefault": {
-        "message": "Geçerli deseni öntanımlı olarak kullan",
+        "message": "Geçerli kalıbı öntanımlı olarak kullan",
         "description": "Button label to use current window's pattern as default pattern"
     },
     "O_preview": {
