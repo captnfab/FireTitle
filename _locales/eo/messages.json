@@ -1,1 +1,62 @@
-{}
+{
+    "B_moreinfo": {
+        "message": "Pli da informo",
+        "description": "Link label for help page"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "Efektivigi implicitan ŝablonon ĉe malfermitaj fenestroj",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "Efektivigi aktualan ŝablonon ĉe malfermitaj fenestroj",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "O_separator": {
+        "message": "Apartigilo",
+        "description": "Label of the separator input"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "Implicitigi aktualan ŝablonon",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "O_preview": {
+        "message": "Antaŭvidi",
+        "description": "Label of the preview for default window's titles"
+    },
+    "O_titlePattern": {
+        "message": "Titola ŝablono",
+        "description": "Label of the title's pattern input"
+    },
+    "O_profileName": {
+        "message": "Nomo de profilo",
+        "description": "Label of the profile's name input"
+    },
+    "OG_currentProfile": {
+        "message": "Aktuala profilo",
+        "description": "Option group name for profile's settings"
+    },
+    "O_windowName": {
+        "message": "Nomo de fenestro",
+        "description": "Label of the window's name input"
+    },
+    "OG_separator": {
+        "message": "Apartigilo",
+        "description": "Option group name for separator settings"
+    },
+    "OG_defaultWindows": {
+        "message": "Aprioraj fenestroj",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "Ekzistantaj fenestroj",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_currentWindow": {
+        "message": "Aktuala fenestro",
+        "description": "Option group name for current window's settings"
+    },
+    "extensionDescription": {
+        "message": "Aldonaĵo por agordi la titolojn de fenestroj de Firefox.",
+        "description": "Description of the extension"
+    }
+}
