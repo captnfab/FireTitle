@@ -1,1 +1,62 @@
-{}
+{
+    "extensionDescription": {
+        "message": "一个允许自定义Firefox窗口标题的扩展。",
+        "description": "Description of the extension"
+    },
+    "OG_existingWindows": {
+        "message": "现有窗口",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_defaultWindows": {
+        "message": "默认窗口",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_separator": {
+        "message": "分组符",
+        "description": "Option group name for separator settings"
+    },
+    "O_windowName": {
+        "message": "窗口名称",
+        "description": "Label of the window's name input"
+    },
+    "OG_currentProfile": {
+        "message": "当前账户资料",
+        "description": "Option group name for profile's settings"
+    },
+    "O_preview": {
+        "message": "预览",
+        "description": "Label of the preview for default window's titles"
+    },
+    "O_titlePattern": {
+        "message": "标题模式",
+        "description": "Label of the title's pattern input"
+    },
+    "O_separator": {
+        "message": "分组符",
+        "description": "Label of the separator input"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "将当前窗口的模式用于全部打开的窗口",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "将默认模式用于全部打开的窗口",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "B_moreinfo": {
+        "message": "更多信息",
+        "description": "Link label for help page"
+    },
+    "O_profileName": {
+        "message": "账户资料的名称",
+        "description": "Label of the profile's name input"
+    },
+    "OG_currentWindow": {
+        "message": "当前窗口",
+        "description": "Option group name for current window's settings"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "将当前窗口的模式设为默认",
+        "description": "Button label to use current window's pattern as default pattern"
+    }
+}
