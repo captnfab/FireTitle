@@ -1,68 +1,62 @@
 {
-  "extensionDescription": {
-    "message": "An add-on allowing the customization of Firefox windows' titles.",
-    "description": "Description of the extension"
-  },
-
-  "OG_currentWindow": {
-    "message": "Current window",
-    "description": "Option group name for current window's settings"
-  },
-
-  "OG_existingWindows": {
-    "message": "Existing windows",
-    "description": "Option group name for existing window's settings"
-  },
-
-  "OG_defaultWindows": {
-    "message": "Default windows",
-    "description": "Option group name for default window's settings"
-  },
-
-  "OG_separator": {
-    "message": "Separator",
-    "description": "Option group name for separator settings"
-  },
-
-  "O_windowName": {
-    "message": "Window's name",
-    "description": "Label of the window's name input"
-  },
-  "OG_currentProfile": {
-    "message": "Current profile",
-    "description": "Option group name for profile's settings"
-  },
-  "O_profileName": {
-    "message": "Profile's name",
-    "description": "Label of the profile's name input"
-  },
-  "O_titlePattern": {
-    "message": "Title pattern",
-    "description": "Label of the title's pattern input"
-  },
-  "O_preview": {
-    "message": "Preview",
-    "description": "Label of the preview for default window's titles"
-  },
-  "B_useCurrentPatternAsDefault": {
-    "message": "Use current pattern as default",
-    "description": "Button label to use current window's pattern as default pattern"
-  },
-
-  "O_separator": {
-    "message": "Separator",
-    "description": "Label of the separator input"
-  },
-  "B_applyCurPatternToExisting": {
-    "message": "Apply current pattern to open windows",
-    "description": "Button label for applying current window's pattern to existing windows"
-  },
-  "B_applyDefPatternToExisting": {
-    "message": "Apply default pattern to open windows",
-    "description": "Button label for applying default pattern to existing windows"
-  },
-  "B_moreinfo": {
-    "message": "More info",
-    "description": "Link label for help page"
-  }
+    "extensionDescription": {
+        "message": "Jeloouuuu Mandy",
+        "description": "Description of the extension"
+    },
+    "OG_currentWindow": {
+        "message": "Current window",
+        "description": "Option group name for current window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "Existing windows",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_defaultWindows": {
+        "message": "Default windows",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_separator": {
+        "message": "Separator",
+        "description": "Option group name for separator settings"
+    },
+    "O_windowName": {
+        "message": "Window's name",
+        "description": "Label of the window's name input"
+    },
+    "OG_currentProfile": {
+        "message": "Current profile",
+        "description": "Option group name for profile's settings"
+    },
+    "O_profileName": {
+        "message": "Profile's name",
+        "description": "Label of the profile's name input"
+    },
+    "O_titlePattern": {
+        "message": "Title pattern",
+        "description": "Label of the title's pattern input"
+    },
+    "O_preview": {
+        "message": "Preview",
+        "description": "Label of the preview for default window's titles"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "Use current pattern as default",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "O_separator": {
+        "message": "Separator",
+        "description": "Label of the separator input"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "Apply current pattern to open windows",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "Apply default pattern to open windows",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "B_moreinfo": {
+        "message": "More info",
+        "description": "Link label for help page"
+    }
 }
