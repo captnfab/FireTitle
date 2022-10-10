@@ -2,5 +2,61 @@
     "extensionDescription": {
         "message": "Jeloouuuu Mandy",
         "description": "Description of the extension"
+    },
+    "O_separator": {
+        "message": "Сепаратор",
+        "description": "Label of the separator input"
+    },
+    "O_profileName": {
+        "message": "Името на профилот",
+        "description": "Label of the profile's name input"
+    },
+    "O_preview": {
+        "message": "Преглед",
+        "description": "Label of the preview for default window's titles"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "Применете го шаблонот за подоцнежна шема за да ги отворите прозорците",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "OG_defaultWindows": {
+        "message": "Прозори по подредба",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_currentProfile": {
+        "message": "Тековен профил",
+        "description": "Option group name for profile's settings"
+    },
+    "O_titlePattern": {
+        "message": "Насловна шема",
+        "description": "Label of the title's pattern input"
+    },
+    "O_windowName": {
+        "message": "Името на прозорецот.",
+        "description": "Label of the window's name input"
+    },
+    "OG_separator": {
+        "message": "Сепаратор",
+        "description": "Option group name for separator settings"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "Користете ја тековната шема како стандардна",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "OG_currentWindow": {
+        "message": "Тековен прозорец",
+        "description": "Option group name for current window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "Постоечки прозорци",
+        "description": "Option group name for existing window's settings"
+    },
+    "B_moreinfo": {
+        "message": "Повеќе инфо",
+        "description": "Link label for help page"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "Применете ја тековната шема за отворени прозорци",
+        "description": "Button label for applying current window's pattern to existing windows"
     }
 }
