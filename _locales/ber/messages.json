@@ -2,5 +2,33 @@
     "extensionDescription": {
         "message": "Jeloouuuu Mandy",
         "description": "Description of the extension"
+    },
+    "OG_defaultWindows": {
+        "message": "ⵉⵙⵕⵥⴰⵎ ⵉⵎⵔⴷⴰ",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_separator": {
+        "message": "ⵉⵏⴱⴹⵉ",
+        "description": "Option group name for separator settings"
+    },
+    "O_windowName": {
+        "message": "ⵉⵙⵎ ⵏ ⵓⵙⵕⵥⵎ",
+        "description": "Label of the window's name input"
+    },
+    "O_profileName": {
+        "message": "ⵉⵙⵎ ⵏ ⵓⵙⴷⴰⵡ ⴰⵏⵉⵎⴰⵏ",
+        "description": "Label of the profile's name input"
+    },
+    "OG_currentProfile": {
+        "message": "ⴰⵙⴷⴰⵡ ⴰⵏⵉⵎⴰⵏ ⵉⵍⵍⴰⵏ ⴷⵖⵉ",
+        "description": "Option group name for profile's settings"
+    },
+    "OG_currentWindow": {
+        "message": "ⴰⵙⵕⵥⵎ ⵏ ⴷⵖⵉ",
+        "description": "Option group name for current window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "ⵉⵙⵕⵥⴰⵎ ⵉⵍⵍⴰⵏ",
+        "description": "Option group name for existing window's settings"
     }
 }
