@@ -1,1 +1,62 @@
-{}
+{
+    "B_moreinfo": {
+        "message": "ⵓⴳⴰⵔ ⵏ ⵡⵓⵎⵍⴰⵏ",
+        "description": "Link label for help page"
+    },
+    "OG_currentWindow": {
+        "message": "ⴰⵙⵕⵥⵎ ⵏ ⴷⵖⵉ",
+        "description": "Option group name for current window's settings"
+    },
+    "OG_existingWindows": {
+        "message": "ⵉⵙⵕⵥⴰⵎ ⵉⵍⵍⴰⵏ",
+        "description": "Option group name for existing window's settings"
+    },
+    "OG_defaultWindows": {
+        "message": "ⵉⵙⵕⵥⴰⵎ ⵉⵎⵔⴷⴰ",
+        "description": "Option group name for default window's settings"
+    },
+    "OG_separator": {
+        "message": "ⵉⵏⴱⴹⵉ",
+        "description": "Option group name for separator settings"
+    },
+    "O_windowName": {
+        "message": "ⵉⵙⵎ ⵏ ⵓⵙⵕⵥⵎ",
+        "description": "Label of the window's name input"
+    },
+    "OG_currentProfile": {
+        "message": "ⴰⵙⴷⴰⵡ ⴰⵏⵉⵎⴰⵏ ⵉⵍⵍⴰⵏ ⴷⵖⵉ",
+        "description": "Option group name for profile's settings"
+    },
+    "O_profileName": {
+        "message": "ⵉⵙⵎ ⵏ ⵓⵙⴷⴰⵡ ⴰⵏⵉⵎⴰⵏ",
+        "description": "Label of the profile's name input"
+    },
+    "O_titlePattern": {
+        "message": "ⴰⵙⵔⵜⵓ ⵏ ⵓⵣⵡⵍ",
+        "description": "Label of the title's pattern input"
+    },
+    "O_preview": {
+        "message": "ⴰⵣⵣⵔⴰⵢ",
+        "description": "Label of the preview for default window's titles"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "ⵔⴰⵔ ⴰⵙⵔⵜⵓ ⵏ ⴷⵖⵉ ⴷ ⴰⵎⵔⴷⵓ",
+        "description": "Button label to use current window's pattern as default pattern"
+    },
+    "O_separator": {
+        "message": "ⵉⵏⴱⴹⵉ",
+        "description": "Label of the separator input"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "ⵜⵉⵙⵏⵙⵉ ⵏ ⵓⵙⵔⵜⵓ ⵏ ⴷⵖⵉ ⵅⴼ ⵓⵕⵥⵥⵓⵎ ⵏ ⵉⵙⵕⵥⴰⵎ",
+        "description": "Button label for applying current window's pattern to existing windows"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "ⵜⵉⵙⵏⵙⵉ ⵏ ⵓⵙⵔⵜⵓ ⴰⵎⵔⴷⵓ ⵅⴼ ⵓⵕⵥⵥⵓⵎ ⵏ ⵉⵙⵕⵥⴰⵎ",
+        "description": "Button label for applying default pattern to existing windows"
+    },
+    "extensionDescription": {
+        "message": "Jeloouuuu Mandy",
+        "description": "Description of the extension"
+    }
+}
