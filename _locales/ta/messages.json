@@ -1,1 +1,47 @@
-{}
+{
+    "OG_defaultWindows": {
+        "message": "இயல்புநிலை சாளரங்கள்"
+    },
+    "OG_separator": {
+        "message": "பிரிப்பான்"
+    },
+    "O_windowName": {
+        "message": "சாளரத்தின் பெயர்"
+    },
+    "OG_currentProfile": {
+        "message": "தற்போதைய சுயவிவரம்"
+    },
+    "O_titlePattern": {
+        "message": "தலைப்பு முறை"
+    },
+    "O_preview": {
+        "message": "முன்னோட்டம்"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "சாளரங்களைத் திறக்க தற்போதைய வடிவத்தைப் பயன்படுத்துங்கள்"
+    },
+    "B_moreinfo": {
+        "message": "மேலும் செய்தி"
+    },
+    "O_separator": {
+        "message": "பிரிப்பான்"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "சாளரங்களைத் திறக்க இயல்புநிலை முறையைப் பயன்படுத்துங்கள்"
+    },
+    "extensionDescription": {
+        "message": "செலூவூ மாண்டி"
+    },
+    "OG_currentWindow": {
+        "message": "தற்போதைய சாளரம்"
+    },
+    "OG_existingWindows": {
+        "message": "தற்போதுள்ள சன்னல்கள்"
+    },
+    "O_profileName": {
+        "message": "சுயவிவரத்தின் பெயர்"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "தற்போதைய வடிவத்தை இயல்புநிலையாகப் பயன்படுத்தவும்"
+    }
+}
