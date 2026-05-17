@@ -1,1 +1,47 @@
-{}
+{
+    "extensionDescription": {
+        "message": "Jeloouuuu Mandy"
+    },
+    "OG_currentWindow": {
+        "message": "Cửa sổ hiện tại"
+    },
+    "OG_existingWindows": {
+        "message": "Cửa sổ hiện có"
+    },
+    "OG_defaultWindows": {
+        "message": "Cửa sổ mặc định"
+    },
+    "O_windowName": {
+        "message": "Tên cửa sổ"
+    },
+    "OG_currentProfile": {
+        "message": "Hồ sơ hiện tại"
+    },
+    "O_profileName": {
+        "message": "Tên hồ sơ"
+    },
+    "O_preview": {
+        "message": "Xem trước"
+    },
+    "B_useCurrentPatternAsDefault": {
+        "message": "Dùng mẫu hiện tại làm mặc định"
+    },
+    "B_applyCurPatternToExisting": {
+        "message": "Áp dụng mẫu hiện tại cho các cửa sổ đang mở"
+    },
+    "B_applyDefPatternToExisting": {
+        "message": "Áp dụng mẫu mặc định cho các cửa sổ đang mở"
+    },
+    "B_moreinfo": {
+        "message": "Thêm thông tin"
+    },
+    "O_separator": {
+        "message": "Dấu phân cách"
+    },
+    "OG_separator": {
+        "message": "Dấu phân cách"
+    },
+    "O_titlePattern": {
+        "message": "Mẫu tiêu để"
+    }
+}
